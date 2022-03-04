@@ -137,12 +137,15 @@ class View {
         './tamayo-sebastian-halma.html', './images/restart-icon.png', '70');
     const HELP_BUTTON = this.#createLinkButton(this.#rootDiv, 
         './help.html', './images/help-icon.png', '70');
-    const BACK_BUTTON = this.#createLinkButton(this.#rootDiv, 
-        './index.html', './images/back-icon.png', '70');
+    const HOME_BUTTON = this.#createLinkButton(this.#rootDiv, 
+        '/index.html', './images/home-icon.png', '70');
+    const DOCS_BUTTON = this.#createLinkButton(this.#rootDiv, 
+        './docs/index.html', './images/docs-icon.png', '70');
 
     BUTTONS_CONTAINER.appendChild(RESET_BUTTON);
     BUTTONS_CONTAINER.appendChild(HELP_BUTTON);
-    BUTTONS_CONTAINER.appendChild(BACK_BUTTON);
+    BUTTONS_CONTAINER.appendChild(DOCS_BUTTON);
+    BUTTONS_CONTAINER.appendChild(HOME_BUTTON);
 
     this.#rootDiv.appendChild(BUTTONS_CONTAINER);
   }
