@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    
+  <h1 class="page-title">Home</h1>
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>Práctica 8. Programación Gráfica en JavaScript. HTML. La API Canvas.</h1>
+<h3>Factor de ponderación: 8</h3>
+<h3>Objetivos</h3>
+<p>Los objetivos de esta práctica son:</p>
+<ul>
+<li>Poner en práctica conceptos de Programación Gráfica en JavaScript usando la API Canvas.</li>
+<li>Practicar el uso de elementos HTML básicos.</li>
+<li>Practicar el uso de algunas propiedades básicas de CSS para dotar de estilo a una página web simple.</li>
+<li>Poner en práctica metodologías y conceptos de Programación Orientada a Objetos en JavaScript.</li>
+<li>Profundizar en el uso de pruebas de software (testing) utilizando Mocha y Chai.</li>
+</ul>
+<h3>Rúbrica de evaluacion del ejercicio</h3>
+<p>Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
+que se tendrán en cuenta a la hora de evaluar esta práctica:</p>
+<ul>
+<li>El comportamiento del programa debe ajustarse a lo solicitado en este enunciado.</li>
+<li>Deben usarse estructuras de datos adecuadas para representar los diferentes elementos que intervienen en el problema.</li>
+<li>Capacidad del programador(a) de introducir cambios en el programa desarrollado.</li>
+<li>Se comprobará que el código que el alumnado escribe se adhiere a las reglas de la
+<a href="https://google.github.io/styleguide/jsguide.html">Guía de Estilo</a>.</li>
+<li>El código ha de estar documentado con <a href="https://jsdoc.app/">JSDoc</a>.
+Haga que la documentación del programa generada con JSDoc esté disponible a través de una web alojada en su máquina IaaS de la asignatura.</li>
+<li>El alumnado ha de acreditar su capacidad para configurar y ejecutar
+<a href="https://eslint.org/">ESLint</a>
+en sus programas.</li>
+<li>El alumnado ha de acreditar que sabe depurar sus programas usando Visual Studio Code.</li>
+<li>Se comprobarán los tests unitarios que el alumnado ha desarrollado para todos sus códigos usando Mocha y Chai, así como
+su capacidad para ejecutar esos tests unitarios desde la interfaz de VSC.
+Todo el código de los tests que realice para desarrollar la aplicación estarán ubicados en el directorio
+<code>test</code> de proyecto.</li>
+<li>Se comprobará el cubrimiento de código que se consigue con los tests usando la herramienta
+<a href="https://about.codecov.io/">CodeCov</a>
+y el informe que la misma genera a través de una web.</li>
+<li>El programa debe ajustarse al paradigma de Orientación a Objetos.</li>
+<li>Todo el código estará ubicado en el directorio <code>src</code> del proyecto. Use subdirectorios de éste si le resulta
+conveniente.</li>
+</ul>
+<h3>El conjunto de Mandelbrot</h3>
+<p>Como es sabido, un número complejo <code>c</code> puede representarse como un punto en un espacio bidimensional, el plano
+complejo.
+El
+<a href="https://es.wikipedia.org/wiki/Conjunto_de_Mandelbrot">conjunto de Mandelbrot</a>
+es un conjunto definido en el plano complejo.
+La pertenencia de un número complejo <code>c</code> al conjunto se determina en función de la siguiente expresión:</p>
+<p><code>z = z^2 + c</code>   [1]</p>
+<p>donde <code>z</code> y <code>c</code> son números complejos.</p>
+<p>La función tiene la condición inicial <code>z = c</code>.
+Lo que habitualmente se calcula es el número de iteraciones necesarias para que <code>z</code> alcance algún valor umbral
+que en el caso del conjunto de Mandelbrot es:</p>
+<p><code>|z| &gt; 2.0</code>     [2]</p>
+<p>Si, dentro de un número finito de iteraciones, se cumple la condición anterior, entonces se
+considera que el punto <code>c</code> está fuera del conjunto de Mandelbrot.</p>
+<h3>La clase <em>Mandelbrot</em></h3>
+<p>En esta práctica se propone desarrollar una clase <code>Mandelbrot</code>
+que posibilite la visualización del conjunto y calcular su área.
+La clase ha de encapsularse en un módulo ES6 <code>mandelbrot.js</code>.</p>
+<p>Previo a la implementación de la clase, diseñe y desarrolle un conjunto de tests para probar el correcto
+funcionamiento de todos los métodos de la clase.</p>
+<p>La visualización de la ejecución del programa se realizará a través de una página web alojada
+en la máquina IaaS-ULL de la asignatura y cuya URL tendrá la forma:</p>
+<p>[3] <code>http://10.6.129.123:8080/einstein-albert-mandelbrot.html</code></p>
+<p>en la que se incustará un canvas para dibujar el conjunto.
+Sustituya <em>Albert Einstein</em> por su nombre y apellido en la URL de su página.</p>
+<p>El valor del área y el error de la misma se imprimirán asimismo <strong>gráficamente</strong> dentro del canvas.
+El resultado de dicha visualización debiera ser similar (a falta del área y error) al que muestra
+<a href="https://math.hws.edu/eck/js/mandelbrot/MB.html">esta página</a> [4].</p>
+<p>Trate de usar elementos HTML y CSS que le permitan imitar -en la medida de lo posible- la estética de la
+página anterior.
+No se propone en esta práctica que dote de interactividad a los elementos (botones, campos de texto,
+selectores, etc.) que figuran en la página anterior.
+Sí debe Ud. tratar de imitar los enlaces que aparecen en la página, el tipo de letra o los colores de la
+misma.</p>
+<p>Diseñe asimismo otra página HTML simple</p>
+<p>[5] <code>http://10.6.129.123:8080/index.html</code></p>
+<p>que sirva de &quot;página índice&quot; para los ejercicios de la sesión de evaluación de la práctica.
+La página [3] será uno de los enlaces de [5] y a su vez [3] tendrá un enlace &quot;Home&quot; que apunte a [5].
+Enlace también en la página índice [5] las páginas que contienen los informes de documentación y de
+cubrimiento de código de su proyecto.</p>
+<h2>Visualización del conjunto</h2>
+<p>Para visualizar el conjunto basta recorrer todos los píxeles (puntos) del canvas asignando un color a cada
+uno dependiendo del número de iteraciones que precisa el punto en cuestión para determinarse si pertenece
+o no al conjunto de Mandelbrot.
+Es muy fácil hallar ejemplos de código que realizan este cálculo de diferentes formas.
+Puede consultar
+<a href="https://www.codingame.com/playgrounds/2358/how-to-plot-the-mandelbrot-set/adding-some-colors">esta referncia</a>
+(código en Python) a modo de ejemplo.</p>
+<p>Pueden idearse estrategias para que la visualización del conjunto resulte fluída.
+Un factor importante para conseguir fluidez es la optimización del código, puesto que se trata de una aplicación intensiva en cómputo.</p>
+<h2>Cálculo del área</h2>
+<p>El cálculo del área del conjunto de Mandelbrot es un problema no trivial, ya que los resultados teóricos y
+numéricos obtenidos para este cálculo no concuerdan.
+Se propone usar el muestreo de Monte Carlo para calcular una solución numérica a este problema.
+El método de Monte Carlo que que se propone implica la generación de un gran número de puntos
+aleatorios en el rango <code>[(-2.0, 0), (0.5, 1.125)]</code> del plano complejo.
+Cada punto será iterado usando la ecuación [1] hasta un determinado límite (digamos hasta 10000).
+Ese número de iteraciones es el que se elige en el selector <em>MaxIterations</em> en la
+<a href="https://math.hws.edu/eck/js/mandelbrot/MB.html">página</a> [4].
+Si dentro de ese número de iteraciones se cumple la condición de umbral, entonces ese punto se considera
+fuera (no perteneciente) del Conjunto de Mandelbrot.
+Al contabilizar el número de puntos aleatorios dentro del conjunto y los que están fuera, se obtiene
+una buena aproximación del área del conjunto.
+El algoritmo que se propone se describe a continuación:</p>
+<ol>
+<li>Se genera un conjunto de <code>N</code> números complejos aleatorios en el intervalo <code>[(-2.0, 0), (0.5, 1.125)]</code>.</li>
+<li>Realizar el muestreo de Monte Carlo iterando sobre los <code>N</code> puntos.<br>
+Para cada punto:</li>
+</ol>
+<ul>
+<li>
+<p>Asignar <code>z = c[i]</code></p>
+</li>
+<li>
+<p>Iterar según la ecuación [1], probando la condición umbral [2] en cada iteración:</p>
+</li>
+<li>
+<p>Si no se cumple la condición del umbral, es decir, <code>|z| &lt;= 2</code>, entonces repetir la iteración
+(hasta el número máximo de iteraciones predeterminado).
+Si después del número máximo de iteraciones la condición sigue sin satisfacerse, entonces
+añada uno al número total de puntos dentro del conjunto.</p>
+</li>
+<li>
+<p>Si se cumple la condición del umbral, entonces deje de iterar y pase al siguiente punto.</p>
+</li>
+</ul>
+<ol start="3">
+<li>Una vez que todos los puntos han sido categorizados como dentro o fuera del conjunto,
+el área estimada y el error vienen dado por las siguientes expresiones:</li>
+</ol>
+<blockquote>
+<p>Àrea = 2 * 2.5 * 1.125 * N<sub>dentro</sub> / N</p>
+</blockquote>
+<blockquote>
+<p>Error = Área / sqrt(N)</p>
+</blockquote>
+<p>Escriba el código para calcular el área y su error.</p>
+<p>Nótese que el número de puntos <code>N</code> que el programa utilice para calcular el área es un parámetro
+que de algún modo habrá que configurar.</p></article>
+    </section>
+
+<p><a href="/index.html">Back to home page.</a></p>
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-ComplexNumber.html">ComplexNumber</a></li><li><a href="module-Mandelbrot.html">Mandelbrot</a></li></ul><h3>Classes</h3><ul><li><a href="module-ComplexNumber-ComplexNumber.html">ComplexNumber</a></li><li><a href="module-Mandelbrot-Mandelbrot.html">Mandelbrot</a></li></ul><h3>Global</h3><ul><li><a href="global.html#computeArea">computeArea</a></li><li><a href="global.html#drawSet">drawSet</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Tue Apr 20 2021 17:14:03 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

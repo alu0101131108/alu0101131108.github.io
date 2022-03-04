@@ -1,0 +1,28 @@
+html {
+  background: rgb(36, 36, 36);
+  font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(132, 131, 133)
+}
+
+canvas {
+  background: white;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+div {
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: white;
+}

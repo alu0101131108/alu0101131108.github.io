@@ -1,0 +1,20 @@
+html {
+  background: rgb(36, 36, 36);
+  font-size: 25px;
+}
+
+h1 {
+  padding-top: 30px;
+  text-align: center;
+  color: rgb(132, 131, 133);
+}
+
+body {
+  padding: 50px;
+  text-align: center;
+  color: rgb(132, 131, 133);
+}
+
+div {
+  padding: 150px;
+}

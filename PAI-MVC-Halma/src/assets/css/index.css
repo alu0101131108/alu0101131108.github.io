@@ -1,0 +1,25 @@
+html {
+  background-color: rgb(47, 14, 14);
+  font-size: 25px;
+  font-family: monospace;
+}
+
+h1 {
+  padding-top: 30px;
+  text-align: center;
+  color: rgb(190, 190, 190);
+}
+
+body {
+  padding: 50px;
+  text-align: center;
+  color: rgb(190, 190, 190);
+}
+
+div {
+  padding: 150px;
+}
+
+a:visited {
+  color: rgb(67, 62, 109);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Help Page</title>
+  <link rel="stylesheet" type="text/css" href="./css/help.css">
+</head>
+
+<body>
+  <div id="rules">
+    <h1>GAME RULES</h1>
+    Halma is a centuries-old board game. Many variations exist. In this example, I’ve created a solitaire version of Halma
+    with 9 pieces on a 9 × 9 board. In the beginning of the game, the pieces form a 3 × 3 square in the bottom-left corner
+    of the board. The object of the game is to move all the pieces so they form a 3 × 3 square in the upper-right corner of
+    the board, in the least number of moves. <br> <br>
+    There are two types of legal moves in Halma:
+    <br>
+    
+    <ul>
+      <li>
+        Take a piece and move it to any adjacent empty square. An “empty” square is one that does not currently have a piece in
+        it. An “adjacent” square is immediately north, south, east, west, northwest, northeast, southwest, or southeast of the
+        piece’s current position. (The board does not wrap around from one side to the other. If a piece is in the left-most
+        column, it can not move west, northwest, or southwest. If a piece is in the bottom-most row, it can not move south,
+        southeast, or southwest.)
+      </li>
+      <br>
+      <li>
+        Take a piece and hop over an adjacent piece, and possibly repeat. That is, if you hop over an adjacent piece, then hop
+        over another piece adjacent to your new position, that counts as a single move. In fact, any number of hops still counts
+        as a single move. (Since the goal is to minimize the total number of moves, doing well in Halma involves constructing,
+        and then using, long chains of staggered pieces so that other pieces can hop over them in long sequences.)
+      </li>
+    </ul>
+  </div>
+  <div id="back-icon">
+    <a href="./tamayo-sebastian-halma.html">
+      <img alt="BACK" src="./images/back-icon.png" width="70" height="70">
+    </a>
+  </div>
+</body>
+
+</html>

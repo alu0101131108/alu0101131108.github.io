@@ -1,0 +1,117 @@
+html {
+  background-image: linear-gradient(180deg, #e0d5d2, white);
+}
+
+body {
+  vertical-align: center;
+}
+
+#headers {
+  font-family: "Lucida Console";
+  height: 70px;
+  color: rgb(132, 131, 133);
+}
+
+#title {
+  float: left;
+  padding-left: 20px;
+  font-size: 50px;
+}
+
+.top-left-link {
+  padding-top: 20px;
+  padding-left: 50px;
+  float: left;
+  font-size: 20px;
+}
+
+.top-right-icon {
+  float: right;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.top-right-link {
+  padding-top: 20px;
+  padding-right: 50px;
+  float: right;
+  font-size: 20px;
+  color: blue;
+}
+
+#main {
+  font-family: "Verdana";
+  overflow: hidden; 
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+#left-panels {
+  width: 20%;
+  height: 700px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 30px;
+}
+
+#left-top-panel {
+  text-decoration-line: underline; 
+  background-color: white;
+  box-shadow: 5px 5px 5px #888888, -5px -1px 5px #888888;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#left-bottom-panel {
+  background-color: white;
+  box-shadow: 5px 5px 5px #888888, -5px -1px 5px #888888;
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+  text-align: center;
+  vertical-align: center;
+}
+
+#canvas {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 30px;
+}
+
+#right-panel {
+  background-color: white;
+  box-shadow: 5px 5px 5px #888888, -5px -1px 5px #888888;
+  width: 20%;
+  height: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 30px;
+}
+
+#algebraic-notation {
+  padding-top:150px
+}
+
+canvas {
+  box-shadow: 5px 5px 5px #888888, -5px -1px 5px #888888;
+  background: white;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+a {
+  font-family: "Lucida Console";
+  color: rgb(132, 131, 133);
+  text-decoration-line: none;
+}

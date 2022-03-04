@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Chess Queens</title>
+  <link rel="stylesheet" type="text/css" href="./css/chess.css">
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body onload="initialize();">
+  <div id="headers">
+    <span id="title">CHESS</span>
+    <span class="top-left-link" ><a href="/index.html">Jugar</a></span>
+    <span class="top-left-link"><a href="/index.html">Aprender</a></span>
+    <span class="top-left-link"><a href="/index.html">Observar</a></span>
+    <span class="top-left-link"><a href="/index.html">Comunidad</a></span>
+    <span class="top-left-link"><a href="/index.html">Herramientas</a></span>
+    <span class="top-right-link"><a href="/index.html">INICIAR SESION</a></span>
+    <span class="top-right-icon"><a href="/index.html"><img src="./img/pai-search-icon.png" width="50" height="50" /></a></span>
+    <span class="top-right-icon"><a href="/index.html"><img src="./img/pai-engine-icon.png" width="50" height="50" /></a></span>
+  </div>
+
+  <div id="main">
+    
+    <div id=left-panels>
+      <div id="left-top-panel">
+        <p>PAI</p>
+        <p>Práctica 11 - Event Driven Programming</p>
+      </div>
+      <div id="left-bottom-panel">
+        <p>
+          <br><br><br>Click on Generate Solution<br>
+          <br>to see in the board the display<br>
+          <br>of eight queens that dont attack<br>
+          <br>each other.<br>
+        </p>
+        <p>
+          <br>Also click on Start Match to see<br>
+          <br>in the board the display of the<br>
+          <br>beginning of a classic chess match.<br>
+        </p>
+
+      </div>
+    </div>
+
+    <div id="canvas">
+      <div>
+        <canvas id="chess-canvas" width="750" height="750"></canvas>
+      </div>
+      <div>
+        <input id="start-match-button" type="button" value="Start Match" />
+        <input id="generate-solution-button" type="button" value="Generate Solution" />
+      </div>
+    </div>
+
+    <div id="right-panel">
+      <p id="algebraic-notation"></p>
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <p>Universidad de La Laguna</p>
+  <p>Grado en Ingeniería Informática</p>
+  <p>Programación de Aplicaciones Interactivas</p>
+</footer>
+
+</html>

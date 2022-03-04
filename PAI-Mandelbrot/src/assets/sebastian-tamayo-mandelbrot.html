@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>Mandelbrot</title>
+    <link rel="stylesheet" type="text/css" href="./css/mandelbrot.css">
+  </head>
+
+  <script type="module" src="./js/main.js"></script>
+  <body onload="drawSet();">
+    <h1>Mandelbrot Graphic Visualization - Sebastián Tamayo</h1>
+    <div>
+      <p>Adjust parameters and watch the graphic representation of mandelbrot set.</p>
+      <p>Mandelbrot set is represented in the complex number plane. By default, X</p>
+      <p>axis is ranged from -2 to 1 and Y axis is ranged from -1 to 1.</p>
+      <p>See more details at <a href="https://es.wikipedia.org/wiki/Conjunto_de_Mandelbrot">Wikipedia</a>.</p> 
+      <p>Also check my <a href="/index.html">Home</a> page.</p>
+      <h3>Drawing related parameters</h3>
+      <p>Range for X axis:</p>
+      <input type="number" id="min-x-axis" value="-2"></input>
+      <input type="number" id="max-x-axis" value="1"></input>
+      <p>Range for Y axis:</p>
+      <input type="number" id="min-y-axis" value="-1"></input>
+      <input type="number" id="max-y-axis" value="1"></input>
+      <p>Maximum iterations:</p>
+      <input type="number" id="max-iterations-draw" value="30" step="10"></input>
+      <p><input id="draw-button" type="button" value="Draw again" onclick="drawSet();"></input></p>
+      <h3>Area related parameters</h3>
+      <p>Number of random numbers generated:</p>
+      <input type="number" id="n-random-numbers" value="10000" step="100"></input>
+      <p>Maximum iterations:</p>
+      <input type="number" id="max-iterations-area" value="10000" step="10"></input>
+      <p><input id="area-button" type="button" value="Calculate Area and Error" onclick="computeArea();" /></p>
+    </div>
+    <div>
+      <canvas id="mandelbrot-canvas" width="1200" height="800" style="border:3px solid black;"></canvas>
+      <span id="draw-state">Draw is loading...</span>
+    </div>
+  </body>
+</html>
