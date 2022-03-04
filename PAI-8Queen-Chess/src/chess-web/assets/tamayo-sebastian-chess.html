@@ -11,14 +11,14 @@
 <body onload="initialize();">
   <div id="headers">
     <span id="title">CHESS</span>
-    <span class="top-left-link" ><a href="/index.html">Jugar</a></span>
-    <span class="top-left-link"><a href="/index.html">Aprender</a></span>
-    <span class="top-left-link"><a href="/index.html">Observar</a></span>
-    <span class="top-left-link"><a href="/index.html">Comunidad</a></span>
-    <span class="top-left-link"><a href="/index.html">Herramientas</a></span>
-    <span class="top-right-link"><a href="/index.html">INICIAR SESION</a></span>
-    <span class="top-right-icon"><a href="/index.html"><img src="./img/pai-search-icon.png" width="50" height="50" /></a></span>
-    <span class="top-right-icon"><a href="/index.html"><img src="./img/pai-engine-icon.png" width="50" height="50" /></a></span>
+    <span class="top-left-link"><a href="/index.html">Home</a></span>
+    <span id="start-btn" class="top-left-link"><a>Start Match</a></span>
+    <span id="generate-sol-btn" class="top-left-link"><a>Generate Solution</a></span>
+    <span class="top-left-link"><a href="./docs/index.html">Documentation</a></span>
+    <span class="top-left-link"><a href="./lcov-report/index.html">Coverage</a></span>
+    <span class="top-right-link">INICIAR SESION</span>
+    <span class="top-right-icon"><img src="./img/pai-search-icon.png" width="50" height="50" /></span>
+    <span class="top-right-icon"><img src="./img/pai-engine-icon.png" width="50" height="50" /></span>
   </div>
 
   <div id="main">
@@ -39,19 +39,14 @@
           <br>Also click on Start Match to see<br>
           <br>in the board the display of the<br>
           <br>beginning of a classic chess match.<br>
+          <br>(Playing is unavaliable)<br>
         </p>
 
       </div>
     </div>
 
     <div id="canvas">
-      <div>
-        <canvas id="chess-canvas" width="750" height="750"></canvas>
-      </div>
-      <div>
-        <input id="start-match-button" type="button" value="Start Match" />
-        <input id="generate-solution-button" type="button" value="Generate Solution" />
-      </div>
+      <canvas id="chess-canvas" width="750" height="750"></canvas>
     </div>
 
     <div id="right-panel">

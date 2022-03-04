@@ -1,5 +1,5 @@
 html {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(47, 14, 14);
   font-size: 25px;
   font-family: monospace;
 }
@@ -17,11 +17,9 @@ body {
 }
 
 div {
-  padding-top: 10px;
-  padding-left: 35%;
-  text-align: left;
+  padding: 150px;
 }
 
-a:visited {
+a, a:visited {
   color: rgb(67, 62, 109);
 }

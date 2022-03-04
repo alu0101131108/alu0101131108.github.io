@@ -37,7 +37,9 @@ body {
   padding-right: 50px;
   float: right;
   font-size: 20px;
-  color: blue;
+  font-family: "Lucida Console";
+  color: rgb(132, 131, 133);
+  text-decoration-line: none;
 }
 
 #main {
@@ -114,4 +116,8 @@ a {
   font-family: "Lucida Console";
   color: rgb(132, 131, 133);
   text-decoration-line: none;
+}
+
+a:hover {
+  color:rgb(20, 20, 20);
 }

@@ -20,9 +20,9 @@ const CHESS = new Chess(CANVAS);
  */
 function initialize() {
   CHESS.emptyBoard();
-  const START_BUTTON = document.querySelector('#start-match-button');
+  const START_BUTTON = document.querySelector('#start-btn');
   START_BUTTON.addEventListener('click', beginChess);
-  const SOLUTION_BUTTON = document.querySelector('#generate-solution-button');
+  const SOLUTION_BUTTON = document.querySelector('#generate-sol-btn');
   SOLUTION_BUTTON.addEventListener('click', generateSolution);
   const ALGEBRAIC_NOTATION = document.querySelector('#algebraic-notation');
   ALGEBRAIC_NOTATION.textContent = 
