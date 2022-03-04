@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="p5.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body style="background-color:darkgrey">
+  </body>
+  <div id="controls" style="float: right; background-color: lightgrey; margin: 20px; padding: 5px">
+    <div id="title" style="text-align: center">
+        <p><b>Inteligencia Artificial - Algoritmos de búsqueda</b></p>
+        <p><b>Sebastián Tamayo Guzmán</b></p>
+    </div>
+      <ul>
+          <li>[r]: Reset grid. (*)</li>
+          <li>[a]: Random wall set (Uses wall proportion). </li>
+          <li>[s]: Start search.</li>
+          <li>[i] + Cursor on cell: Set initial cell (green).</li>
+          <li>[e] + Cursor on cell: Set end cell (brown).</li>
+          <li>[h]: Change heuristic function.</li>
+          <li>[Left Click] Place wall.</li>
+          <li>[Left Click] Erase wall.</li>
+          <li>[Up arrow] Greater wall pincel size.</li>
+          <li>[Down arrow] Lower wall pincel size.</li>
+          <li>(NumPad) [4]: Reduce columns by 1. </li>
+          <li>(NumPad) [6]: Increment columns by 1. </li>
+          <li>(NumPad) [8]: Reduce rows by 1. </li>
+          <li>(NumPad) [2]: Increment rows by 1. </li>
+          <li>(NumPad) [7]: Lower grid size. </li>
+          <li>(NumPad) [9]: Greater grid size. </li>
+          <li>(NumPad) [1]: Lower wall proportion. </li>
+          <li>(NumPad) [3]: Greater wall proportion. </li>
+          <li>(NumPad) [5]: Set values to default.</li>
+          <li>(NumPad) [0]: Show current values in console. (*)</li>
+      </ul>
+      <p>(*) Can be used at any time. Others only before search has started.</p>
+      <p>Open dev tools to see the console: [ctrl + shft + i]</p>
+  </div>
+</html>

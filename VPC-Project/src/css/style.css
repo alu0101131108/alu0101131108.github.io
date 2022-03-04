@@ -1,0 +1,151 @@
+html, body {
+  background-color: #1C1C21;
+  color: white;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+#title, footer{
+  background-color: #5D0000;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show{
+  color: white;
+  background-color: #5D0000;
+  border-color: white;
+}
+
+.nav-link, .nav button:hover {
+  color: white;
+}
+
+.btn, .btn-outline-primary, .btn-check:active+.btn-outline-primary, 
+.btn-check:checked+.btn-outline-primary, .btn-outline-primary.active, 
+.btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
+  color: white;
+  background-color: #5D0000;
+  border-color: white;
+}
+
+.btn-outline-primary:not(:checked) {
+  background-color: #1C1C21;
+}
+
+.btn:hover, .pressed, .btn-outline-primary:checked:hover{
+  background-color: #370000;
+  border-color: white;
+  color: white;
+}
+
+.card {
+  background-color: #242424;
+  border-color: white;
+  width: 250px;
+}
+
+.card:hover {
+  background-color: #5D0000;
+  cursor: pointer;
+}
+
+.card-img-top {
+  margin-top: 2vh;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+}
+
+.btn-work { 
+  text-align: center; 
+}
+
+.spinner-border {
+  display: none;
+  margin-left: auto;
+  margin-bottom: 1vh;
+  width: 2rem;
+  height: 2rem;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show{
+  color: white;
+  background-color: #5D0000;
+  border-color: white;
+}
+
+.nav-link, .nav button:hover {
+  color: white;
+}
+
+.list-group-item-light {
+  background-color: #1C1C21;
+  border-color: white;
+  color: white;
+}
+
+#org-title, #res-title {
+  background-color: #5D0000;
+}
+
+#icon-box {
+  margin: auto;
+}
+
+#add-icon {
+  height: 150px;
+  width: 150px;
+}
+
+#canvas {
+  height: 53vh;
+  overflow-y: scroll;
+}
+
+#canvas::-webkit-scrollbar {
+  width: 1vh;                             /* width of the entire scrollbar */
+}
+
+#canvas::-webkit-scrollbar-thumb {
+  background-color: #5D0000;       /* color of the scroll thumb */
+  border-radius: 90px;                    /* roundness of the scroll thumb */
+  border: 1px solid #ffffff;    /* creates padding around scroll thumb */
+}
+
+#canvas::-webkit-scrollbar-thumb:hover {
+  background-color: #370000;
+}
+
+#operations {
+  text-align: center;
+}
+
+#original-chartbox {
+  height: 800px;
+}
+
+#result-chartbox {
+  display: none;
+  height: 800px;
+}
+
+#lbs-chartbox, #histogramEsp-chartbox, #difference-chartbox {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+#transformation-chartbox {
+  display: none;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+#ops {
+  height: 120%;
+}
