@@ -1,5 +1,5 @@
 html {
-  background-color: rgb(47, 14, 14);
+  background-color: rgb(53, 0, 0);
   font-size: 25px;
   font-family: monospace;
 }
@@ -17,10 +17,16 @@ body {
 }
 
 div {
-  padding: 150px;
+  padding: 100px;
 }
 
 a, a.visited {
   color: rgb(67, 62, 109);
+  text-decoration: none;
+}
+
+a:hover,
+a.visited:hover {
+  color: rgb(39, 35, 68);
   text-decoration: none;
 }
