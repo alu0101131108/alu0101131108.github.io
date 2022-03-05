@@ -1,0 +1,26 @@
+body {
+  margin: 50px;
+}
+
+main {
+  text-align: center;
+}
+
+canvas {
+  border: 5px solid black; 
+  margin: 50px;
+}
+
+#title {
+  text-align: center;
+  font-size: 25px;
+}
+
+#controls {
+  float: left; background-color: lightgrey; margin: 20px; padding: 5px
+}
+
+a, a.visited {
+  text-decoration: none;
+  color: rgb(33, 41, 119);
+}

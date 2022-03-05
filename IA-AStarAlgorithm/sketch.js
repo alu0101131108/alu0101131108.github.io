@@ -317,7 +317,6 @@ function keyPressed() {
 
 function setup() {
     let canvas = createCanvas(boxsize * cols, boxsize * rows);
-    canvas.style("border: 5px solid black; margin: 20px");
     resetDataStructures();
 
     // Init grid.
