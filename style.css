@@ -20,7 +20,7 @@ div {
   padding: 150px;
 }
 
-a, a:visited {
+a, a.visited {
   color: rgb(67, 62, 109);
   text-decoration: none;
 }
