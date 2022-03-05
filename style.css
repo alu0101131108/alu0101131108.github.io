@@ -22,4 +22,5 @@ div {
 
 a, a:visited {
   color: rgb(67, 62, 109);
+  text-decoration: none;
 }
