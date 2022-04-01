@@ -3,179 +3,270 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Módulo spread | AST Types - Informe</title>
+    <title>Egg Parser Report</title>
     <meta name="generator" content="VuePress 1.9.7">
     
-    <meta name="description" content="Práctica para la asignatura procesadores de lenguajes en la Universidad de La Laguna.">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
-    <link rel="preload" href="./assets/css/0.styles.5e2d7525.css" as="style"><link rel="preload" href="./assets/js/app.9302cb63.js" as="script"><link rel="preload" href="./assets/js/2.d3be6320.js" as="script"><link rel="preload" href="./assets/js/15.b4697afd.js" as="script"><link rel="prefetch" href="./assets/js/10.3f9017d7.js"><link rel="prefetch" href="./assets/js/11.d8ee9b99.js"><link rel="prefetch" href="./assets/js/12.4bfa30b1.js"><link rel="prefetch" href="./assets/js/13.2731df28.js"><link rel="prefetch" href="./assets/js/14.c4a597c3.js"><link rel="prefetch" href="./assets/js/3.141e85f2.js"><link rel="prefetch" href="./assets/js/4.097fc257.js"><link rel="prefetch" href="./assets/js/5.00b87c7f.js"><link rel="prefetch" href="./assets/js/6.d2b12716.js"><link rel="prefetch" href="./assets/js/7.2df05ca1.js"><link rel="prefetch" href="./assets/js/8.8646c1c0.js"><link rel="prefetch" href="./assets/js/9.607abdce.js">
-    <link rel="stylesheet" href="./assets/css/0.styles.5e2d7525.css">
+    <link rel="preload" href="./assets/css/0.styles.39aba7b6.css" as="style"><link rel="preload" href="./assets/js/app.6452aae2.js" as="script"><link rel="preload" href="./assets/js/2.2c19e274.js" as="script"><link rel="preload" href="./assets/js/10.9880244f.js" as="script"><link rel="prefetch" href="./assets/js/3.88206dff.js"><link rel="prefetch" href="./assets/js/4.5d1502bd.js"><link rel="prefetch" href="./assets/js/5.1741a772.js"><link rel="prefetch" href="./assets/js/6.2f3f3a69.js"><link rel="prefetch" href="./assets/js/7.b8edc5d8.js"><link rel="prefetch" href="./assets/js/8.a2ce5c9f.js"><link rel="prefetch" href="./assets/js/9.ee188243.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.39aba7b6.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="./" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">AST Types - Informe</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="./" aria-current="page" class="nav-link router-link-exact-active router-link-active">
-  Inicio
-</a></div><div class="nav-item"><a href="./api/" class="nav-link">
-  Documentación
-</a></div><div class="nav-item"><a href="./cov/" class="nav-link">
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="./" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">Egg Parser Report</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="./" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Report
+</a></div><div class="nav-item"><a href="./jsdoc/index.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="./coverage/lcov-report/index.html" class="nav-link">
   Coverage
-</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/ast-types-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  Repositorio
+</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Repo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108/packages/1338834" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Package
   <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="./" aria-current="page" class="nav-link router-link-exact-active router-link-active">
-  Inicio
-</a></div><div class="nav-item"><a href="./api/" class="nav-link">
-  Documentación
-</a></div><div class="nav-item"><a href="./cov/" class="nav-link">
+  Report
+</a></div><div class="nav-item"><a href="./jsdoc/index.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="./coverage/lcov-report/index.html" class="nav-link">
   Coverage
-</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/ast-types-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  Repositorio
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="modulo-spread"><a href="#modulo-spread" class="header-anchor">#</a> Módulo spread</h2> <p>Se ha construido un paquete que exporta la función <code>spread</code>. Esta espera recibir
-un string que contenga un código JavaScript que a su vez contenga el operador <code>...</code>.
-Esta función se encargará de generar un código equivalente que traduzca dicho operador
-de manera que el código sea válido en versiones anteriores de JS. Este será devuelto por
-la función en una variable de tipo string.</p> <p>Para conseguir su objetivo, el módulo utiliza los siguientes paquetes:</p> <ul><li><code>ast-types</code>: Este paquete provee principalmente herramientas para recorrer árboles
-de sintaxis abstracta (AST) y para alterar su contenido, ya sea creando nuevos nodos o
-alterando los ya existentes.</li> <li><code>recast</code>: Este paquete permite principalmente generar código partiendo de un AST
-procesado mediante el paquete anterior.</li> <li><code>flow-parser</code>: Este paquete permite principalmente generar un AST partiendo de un
-código de javascript.</li></ul> <p>A continuación se muestra el código de <code>spread</code>:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> namedTypes<span class="token punctuation">,</span> builders<span class="token punctuation">,</span> visit <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;ast-types&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> recast <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;recast&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> flow <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;flow-parser&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Repo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108/packages/1338834" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Package
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><!----> <h1 id="main-title">
+      Egg Parser Report
+    </h1> <p class="description">
+      Procesadores de lenguajes - Universidad de La Laguna
+    </p> <!----></header> <!----> <div class="theme-default-content custom content__default"><h2 id="descripcion-de-la-tarea"><a href=".#descripcion-de-la-tarea" class="header-anchor">#</a> Descripción de la tarea</h2> <p>Se pretende crear un programa en JavaScript capaz de actuar como parser del lenguaje de
+programación Egg utilizando las funcionalidades que proporciona la herramienta
+Nearly.js. Además de verificar la validez del código, se construye el Abstract
+Syntax Tree asociado al código analizado. De esta manera, se convertirá este AST en
+un archivo JSON que será escrito en un fichero de salida.</p> <p>Además, todo esto quedará encapsulado en un paquete de node subido en el Github registry
+y documentado utilizando Vuepress.</p> <h2 id="creacion-del-parser-con-nearly-js"><a href=".#creacion-del-parser-con-nearly-js" class="header-anchor">#</a> Creación del parser con Nearly.js</h2> <p>En primer lugar, será necesaria la creación de tres archivos:</p> <h3 id="lex-js"><a href=".#lex-js" class="header-anchor">#</a> lex.js</h3> <p>En él se especifica el léxico que reconocerá nuestro parser. Para ello crearemos un objeto
+cuyos atributos corresponderán a tipos de tokens que queremos reconocer. Por ejemplo
+comentarios, números, cadenas de texto, etc. Cada tipo de token vendrá descrito mediante
+una expresión regular que lo valide. Para finalizarlo, es necesario utilizar la
+función <code>makeLexer</code> del paquete <code>moo-ignore</code> para poder construir nuestro léxico
+basado en las descripciones anteriores, siendo capaces de ignorar algunas (comentarios).</p> <p>En mi caso, el archivo <code>lex.js</code> quedó de la siguiente forma:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> makeLexer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;moo-ignore&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Tokens <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token constant">WHITES</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">match</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\s+</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token literal-property property">lineBreaks</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token constant">HASHTAG</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">#[^\n]*</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+  <span class="token constant">ML_COMMENT</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\/\*[^]*?\*\/</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+  <span class="token constant">SL_COMMENT</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\/\/.*</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+  <span class="token constant">NUMBER</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">match</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token function-variable function">value</span><span class="token operator">:</span> <span class="token parameter">x</span> <span class="token operator">=&gt;</span> <span class="token function">Number</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token constant">STRING</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">&quot;(?:[^&quot;\\]|\\.)*&quot;</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+  <span class="token constant">WORD</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[^\s(),&quot;]+</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;(&quot;</span><span class="token operator">:</span> <span class="token string">&quot;(&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;)&quot;</span><span class="token operator">:</span> <span class="token string">&quot;)&quot;</span><span class="token punctuation">,</span>
+  <span class="token string-property property">&quot;,&quot;</span><span class="token operator">:</span> <span class="token string">&quot;,&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> lexer <span class="token operator">=</span> <span class="token function">makeLexer</span><span class="token punctuation">(</span>Tokens<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&quot;WHITES&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;HASHTAG&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ML_COMMENT&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;SL_COMMENT&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">eof</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> lexer<span class="token punctuation">;</span>
+</code></pre></div><p>Se puede observar que se han incluido tokens asociados a espacios en blanco, comentarios
+de tipo <code># bla bla</code>, <code>// bla bla</code> y <code>/* bla bla */</code>; números, cadenas de
+texto, palabras del lenguaje y los símbolos '(', ')' y ','.</p> <h3 id="egg-ne"><a href=".#egg-ne" class="header-anchor">#</a> egg.ne</h3> <p>En este fichero se especifica la gramática a utilizar y la estructura con la que se
+irá construyendo el AST. Para la construcción de este árbol, se utilizan unas funciones
+creadas en el tercer archivo de la explicación de las que hablaré mas adelante. El archivo
+queda de la siguiente forma:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>@<span class="token punctuation">{</span><span class="token operator">%</span>
+  <span class="token keyword">const</span> lexer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./lex.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> buildApply<span class="token punctuation">,</span> buildWord<span class="token punctuation">,</span> buildValue <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./build-ast.js'</span><span class="token punctuation">)</span>
+<span class="token operator">%</span><span class="token punctuation">}</span>
 
-<span class="token keyword">function</span> <span class="token function">spread</span><span class="token punctuation">(</span><span class="token parameter">code</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> ast <span class="token operator">=</span> flow<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">ecmaVersion</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token literal-property property">loc</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">visit</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-    <span class="token function">visitFunction</span><span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> node <span class="token operator">=</span> path<span class="token punctuation">.</span>node<span class="token punctuation">;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">traverse</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      
-      <span class="token keyword">let</span> lastArg <span class="token operator">=</span> node<span class="token punctuation">.</span>params<span class="token punctuation">[</span>node<span class="token punctuation">.</span>params<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>lastArg<span class="token punctuation">.</span>type <span class="token operator">!==</span> <span class="token string">&quot;RestElement&quot;</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
-      node<span class="token punctuation">.</span>params<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      namedTypes<span class="token punctuation">.</span>BlockStatement<span class="token punctuation">.</span><span class="token function">assert</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      
-      <span class="token keyword">const</span> restVarDecl <span class="token operator">=</span> builders<span class="token punctuation">.</span><span class="token function">variableDeclaration</span><span class="token punctuation">(</span><span class="token string">&quot;let&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
-        builders<span class="token punctuation">.</span><span class="token function">variableDeclarator</span><span class="token punctuation">(</span>
-          lastArg<span class="token punctuation">.</span>argument<span class="token punctuation">,</span>
-          builders<span class="token punctuation">.</span><span class="token function">callExpression</span><span class="token punctuation">(</span><span class="token constant">SLICE_EXPRESSION</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
-            builders<span class="token punctuation">.</span><span class="token function">identifier</span><span class="token punctuation">(</span><span class="token string">&quot;arguments&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-            builders<span class="token punctuation">.</span><span class="token function">literal</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>params<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
-          <span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">)</span>
-      <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      path<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;body&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;body&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span>restVarDecl<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token function">visitArrayExpression</span><span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> node <span class="token operator">=</span> path<span class="token punctuation">.</span>node<span class="token punctuation">;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">traverse</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">elem</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> elem<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">&quot;SpreadElement&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">const</span> newElements <span class="token operator">=</span> node<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">elem</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>elem<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">&quot;SpreadElement&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> builders<span class="token punctuation">.</span><span class="token function">identifier</span><span class="token punctuation">(</span>elem<span class="token punctuation">.</span>argument<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          <span class="token keyword">return</span> builders<span class="token punctuation">.</span><span class="token function">arrayExpression</span><span class="token punctuation">(</span><span class="token punctuation">[</span>elem<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        path<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>builders<span class="token punctuation">.</span><span class="token function">callExpression</span><span class="token punctuation">(</span><span class="token constant">CONCAT_EXPRESSION</span><span class="token punctuation">,</span> newElements<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  
-  <span class="token keyword">return</span> recast<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>ast<span class="token punctuation">)</span><span class="token punctuation">.</span>code<span class="token punctuation">;</span>
+@lexer lexer
+
+expression <span class="token operator">-</span><span class="token operator">&gt;</span>  <span class="token operator">%</span><span class="token constant">STRING</span>  <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> <span class="token function">buildValue</span><span class="token punctuation">(</span>d<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">|</span>  <span class="token operator">%</span><span class="token constant">NUMBER</span>          <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> <span class="token function">buildValue</span><span class="token punctuation">(</span>d<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">|</span>  <span class="token operator">%</span><span class="token constant">WORD</span> applies    <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> <span class="token function">buildApply</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+applies <span class="token operator">-</span><span class="token operator">&gt;</span>   <span class="token keyword">null</span>       <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> <span class="token keyword">null</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">|</span>  <span class="token string">&quot;(&quot;</span> arguments <span class="token string">&quot;)&quot;</span> <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> d<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+
+arguments <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token keyword">null</span>       <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+    <span class="token operator">|</span> <span class="token function">expression</span> <span class="token punctuation">(</span><span class="token string">&quot;,&quot;</span> expression <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> d<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">%</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token operator">*</span> <span class="token punctuation">{</span><span class="token operator">%</span> <span class="token parameter">d</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>d<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>d<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token punctuation">}</span>
+</code></pre></div><p>Se puede observar que se está utilizando el léxico especificado en <code>lex.js</code>. Además,
+se especifica que ante cualquier entrada, se espera un token de tipo String, Number o Word,
+en el caso de encontrar un token de tipo Word, se entra en el estado &quot;applies&quot; y entonces
+se espera un token de tipo nulo o una expresión dentro de paréntesis. En el segundo caso,
+se espera que esta expresión sea nula o una lista no vacía de expresiones.</p> <p>Como se comentó, al reconocer un token se llama a una serie de funciones que van
+construyendo el AST.</p> <h3 id="build-ast-js"><a href=".#build-ast-js" class="header-anchor">#</a> build-ast.js</h3> <p>En este fichero se definen las funciones que ayudan en la construcción del AST. Estas
+funciones son: buildApply, buildWord y buildValue.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">buildApply</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;apply: &quot;</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">buildWord</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">&quot;apply&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">operator</span><span class="token operator">:</span> <span class="token function">buildWord</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">args</span><span class="token operator">:</span> data<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>Cabe destacar que la función <code>visit</code> que provee el paquete <code>ast-types</code>. Esta permite
-recorrer el AST generado por el código de entrada que es pasado por parámetro a la función.
-A su vez, dentro se desarrollan dos funciones: <code>visitFunction</code> y <code>visitArrayExpression</code>.
-De esta manera, al recorrer el AST, el código de estas funciones se ejecutará cada vez que
-la exploración del AST atraviese un nodo asociado a una Función o a un Array respectivamente,
-con el objetivo de hacer los cambios necesarios para realizar la traducción del operador <code>...</code>.</p> <p>Se puede ver que se utilizan las constantes SLICE_EXPRESSION y CONCAT_EXPRESSION. Estas están
-definidas fuera de la función de la siguiente manera:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token constant">SLICE_EXPRESSION</span> <span class="token operator">=</span> builders<span class="token punctuation">.</span><span class="token function">memberExpression</span><span class="token punctuation">(</span>
-  builders<span class="token punctuation">.</span><span class="token function">memberExpression</span><span class="token punctuation">(</span>
-    builders<span class="token punctuation">.</span><span class="token function">memberExpression</span><span class="token punctuation">(</span>
-      builders<span class="token punctuation">.</span><span class="token function">identifier</span><span class="token punctuation">(</span><span class="token string">&quot;Array&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      builders<span class="token punctuation">.</span><span class="token function">identifier</span><span class="token punctuation">(</span><span class="token string">&quot;prototype&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token boolean">false</span>
-    <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    builders<span class="token punctuation">.</span><span class="token function">identifier</span><span class="token punctuation">(</span><span class="token string">&quot;slice&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token boolean">false</span>
-  <span class="token punctuation">)</span><span class="token punctuation">,</span>
-  builders<span class="token punctuation">.</span><span class="token function">identifier</span><span class="token punctuation">(</span><span class="token string">&quot;call&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token boolean">false</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">const</span> <span class="token constant">CONCAT_EXPRESSION</span> <span class="token operator">=</span> builders<span class="token punctuation">.</span><span class="token function">memberExpression</span><span class="token punctuation">(</span>
-  builders<span class="token punctuation">.</span><span class="token function">arrayExpression</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  builders<span class="token punctuation">.</span><span class="token function">identifier</span><span class="token punctuation">(</span><span class="token string">&quot;concat&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token boolean">false</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre></div><p>Ambas constantes contienen objetos asociados a nodos de un AST construidos con ayuda del paquete
-<code>ast-types</code>. La primera se asocia con una expresión del tipo <code>Array.prototype.slice.call()</code>
-mientras que la segunda se asocia con una expresión del tipo <code>[].concat()</code>.</p> <h2 id="ejecutable-con-commander"><a href="#ejecutable-con-commander" class="header-anchor">#</a> Ejecutable con Commander</h2> <p>Por otra parte, el módulo también incluye un ejecutable que se puede utilizar de la siguiente forma:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>spread <span class="token operator">&lt;</span>input_filename<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>output_filename<span class="token operator">&gt;</span>
-</code></pre></div><p>Este se encarga de leer el contenido de input_filename para procesarlo con la función <code>spread</code>
-y volcar el resultado en el output_file.</p> <p>Para conseguir incluir este ejecutable en el paquete, fueron necesarios los siguientes pasos:</p> <ol><li>Incluir las siguientes lineas en el <code>package.json</code>:</li></ol> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;bin&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">&quot;spread&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bin/spread-cli.js&quot;</span>
+<span class="token keyword">function</span> <span class="token function">buildWord</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;word: &quot;</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">&quot;word&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">offset</span><span class="token operator">:</span> data<span class="token punctuation">.</span>offset<span class="token punctuation">,</span>
+    <span class="token literal-property property">lineBreaks</span><span class="token operator">:</span> data<span class="token punctuation">.</span>lineBreaks<span class="token punctuation">,</span>
+    <span class="token literal-property property">line</span><span class="token operator">:</span> data<span class="token punctuation">.</span>line<span class="token punctuation">,</span>
+    <span class="token literal-property property">col</span><span class="token operator">:</span> data<span class="token punctuation">.</span>col<span class="token punctuation">,</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> data<span class="token punctuation">.</span>value
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><ol start="2"><li>Incluir la siguiente linea en el principio de <code>bin/spread.cli.js</code>:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>#!/usr/bin/env node
-</code></pre></div><p>Como se observa en el <code>package.json</code>, este ejecutable tiene su código fuente alojado en
-<code>bin/spread.cli.js</code>. En este fichero se hace uso del paquete Commander para facilitar
-la creación del ejecutable y la inclusión de flags como por ejemplo <code>spread -h</code> que produce
-la siguiente salida:</p> <div class="language- extra-class"><pre class="language-text"><code>Usage: spread [options] &lt;input_filename&gt; &lt;output_filename&gt;
+<span class="token keyword">function</span> <span class="token function">buildValue</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;value: &quot;</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">value</span><span class="token operator">:</span> data<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+    <span class="token literal-property property">raw</span><span class="token operator">:</span> data<span class="token punctuation">.</span>text
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Se puede observar que todas ellas toman un valor &quot;data&quot; como parámetro. Este contendrá
+información importante relativa al token que se esté procesando. En el caso de buildApply,
+data será un Array cuyo primer valor corresponderá al identificador de la llamada y el
+segundo será una lista de los argumentos. Por ejemplo: exp: f(1, 2), id: f, args: [1, 2].</p> <h2 id="uso-del-parser-creado-anteriormente"><a href=".#uso-del-parser-creado-anteriormente" class="header-anchor">#</a> Uso del parser creado anteriormente</h2> <p>Una vez creados y completados los tres archivos anteriores, queda construir el parser. Para
+ello se puede utilizar el comando <code>nearleyc src/egg.ne -o src/grammar.js</code>. De esta
+manera se nos genera un archivo grammar.js que contiene el código del parser que acabamos
+de crear.</p> <p>Cuando ya esté en su correspondinte archivo, se creará otro fichero que exporte una función
+que utilice el parser que acabamos de crear.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> nearley <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;nearley&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> grammar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./src/grammar.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">parseFromFile</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">origin</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> output <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> input <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>origin<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">encoding</span><span class="token operator">:</span> <span class="token string">'utf8'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">nearley<span class="token punctuation">.</span>Parser</span><span class="token punctuation">(</span>nearley<span class="token punctuation">.</span>Grammar<span class="token punctuation">.</span><span class="token function">fromCompiled</span><span class="token punctuation">(</span>grammar<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    parser<span class="token punctuation">.</span><span class="token function">feed</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> ast <span class="token operator">=</span> parser<span class="token punctuation">.</span>results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    output <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+  <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> e<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> output<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-Traduction from es6 operator to previous js versions.
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span> parseFromFile <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Se puede observar que se crea una función parseFromFile que será la que se exporte luego.
+Esta función toma como parámetro la ruta en la que se encuentra el archivo del cual
+queremos leer el código egg. Luego se crea una nueva instancia de un Parser de Nearly.js
+utilizando el archivo grammar.js creado anteriormente. A continuación se parsea la entrada
+mediante la función <code>parser.feed(&lt;input&gt;)</code> y se devuelve el ast asociado en formato
+string.</p> <p>Es importante resaltar que el uso de la sentencia try {} catch {} es muy importante para
+conseguir el reto propuesto en la práctica.</p> <h2 id="creacion-del-programa-ejecutable-con-commander"><a href=".#creacion-del-programa-ejecutable-con-commander" class="header-anchor">#</a> Creación del programa ejecutable con Commander</h2> <p>Por otra parte, el módulo también incluye un ejecutable que se puede utilizar de la siguiente forma:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>eggc <span class="token operator">&lt;</span>input_filename<span class="token operator">&gt;</span> -o <span class="token operator">&lt;</span>output_filename<span class="token operator">&gt;</span>
+</code></pre></div><p>Este se encarga de leer el contenido de input_filename para procesarlo con la función <code>parseFromFile</code> y volcar el resultado en el output_file.</p> <p>Para conseguir incluir este ejecutable en el paquete, fueron necesarios los siguientes pasos:</p> <ol><li>Incluir las siguientes lineas en el <code>package.json</code>:</li></ol> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;bin&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;eggc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bin/eggc.js&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>Incluir la siguiente linea en el principio de <code>bin/eggc.js</code>:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>#!/usr/bin/env node
+</code></pre></div><ol start="3"><li>Como se observa en el <code>package.json</code>, este ejecutable tiene su código fuente alojado en <code>bin/eggc.js</code>. En este fichero se hace uso del paquete Commander para facilitar
+la creación del ejecutable y la inclusión de flags como por ejemplo <code>eggc -h</code> que produce la siguiente salida:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>Usage: eggc [options] &lt;filename&gt;
+
+Lab for language processors
 
 Arguments:
-  input_filename   file with the original code
-  output_filename  file with the traduced code
+  filename              file with the original code
 
 Options:
-  -V, --version    output the version number
-  -h, --help       display help for command
-</code></pre></div><h2 id="challenge-spread-elements-inside-an-arrayexpression"><a href="#challenge-spread-elements-inside-an-arrayexpression" class="header-anchor">#</a> Challenge - Spread elements inside an ArrayExpression</h2> <p>Este reto propone incluir la traducción del operador <code>...</code>
-cuando se encuentra dentro de una declaración de array. De esta
-manera la siguiente entrada:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> parts <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'shoulders'</span><span class="token punctuation">,</span> <span class="token string">'knees'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> lyrics <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'head'</span><span class="token punctuation">,</span> <span class="token operator">...</span>parts<span class="token punctuation">,</span> <span class="token string">'and'</span><span class="token punctuation">,</span> <span class="token string">'toes'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre></div><p>Tiene que producir la siguiente salida:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> parts <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;shoulders&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;knees&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> lyrics <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;head&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> parts<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&quot;and&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&quot;toes&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre></div><p>Esto se consigue con la función <code>visitArrayExpression</code> que ya se ha
-mencionado anteriormente. Esta se ejecuta al recorrer el AST y encontrarse
-un nodo asociado a una expresión de array. Cuando se ejecuta, revisa si
-el array en cuestión contiene el operador <code>...</code>. En caso afirmativo,
-mapea sus elementos a otro array de manera que aquellos que utilicen el
-operador <code>...</code>, lo descarten quedando solo el identificador asociado
-(p.e <code>[...parts]</code> =&gt; <code>[parts]</code>). Y aquellos que no utilizaran dicho
-operador, los encapsula de nuevo en otro array (p.e <code>[a, b]</code> =&gt;
-<code>[[a], [b]]</code>).</p> <p>De esta manera, utilizando la mencionada <code>CONCAT_EXPRESSION</code>, se consiguen
-concatenar todos los elementos del nuevo array a un array vacio, simulando el
-mismo comportamiento inicial (p.e <code>[...a, b]</code> =&gt; <code>[].concat(a, [b])</code>).</p> <h2 id="publicando-el-paquete-en-github-registry"><a href="#publicando-el-paquete-en-github-registry" class="header-anchor">#</a> Publicando el paquete en Github Registry</h2> <p>Se propone para esta práctica publicar el paquete en el registro de github. Para
+  -V, --version         output the version number
+  -o, --out &lt;filename&gt;  Path for the output file (default: &quot;output.json&quot;)
+  -h, --help            display help for command
+</code></pre></div><h2 id="test-con-mocha-y-chai"><a href=".#test-con-mocha-y-chai" class="header-anchor">#</a> Test con Mocha y Chai</h2> <p>También se han incluido una serie de tests para comprobar el correcto funcionamiento del
+programa. Estos se encuentran alojados en la carpeta <code>tests</code>. Por un lado, en la
+carpeta <code>examples</code> se encuentran una serie de archivos con diversos códigos egg. Los
+asts ya construidos y verificados para esos ejemplos se encuentran en la carpeta <code>ast</code>.
+En la carpeta <code>errors</code> se encuentran una serie de códigos egg que deberian producir
+errores concretos al ser parseados.</p> <p>De esta manera, se hace uso de todos esos archivos para completar los tests. El código
+principal asociado a los test se encuentra en compile.spec.js:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> should <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'chai'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">should</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> assert <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'chai'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>assert<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> parseFromFile <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../index.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> skipKeys<span class="token punctuation">,</span> simpleDeb <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/utils.js'</span><span class="token punctuation">)</span>
+
+<span class="token function">skipKeys</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'toString'</span><span class="token punctuation">,</span> <span class="token string">&quot;line&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;offset&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;lineBreaks&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Compiler'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">runTest</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">testName</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'test/ast/'</span> <span class="token operator">+</span> testName <span class="token operator">+</span> <span class="token string">'.json'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">encoding</span><span class="token operator">:</span> <span class="token string">'utf8'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token function">parseFromFile</span><span class="token punctuation">(</span><span class="token string">'test/examples/'</span> <span class="token operator">+</span> testName <span class="token operator">+</span> <span class="token string">'.egg'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    expected<span class="token punctuation">.</span>should<span class="token punctuation">.</span>deep<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> testList <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'array'</span><span class="token punctuation">,</span>
+    <span class="token string">'if'</span><span class="token punctuation">,</span>
+    <span class="token string">'scope'</span><span class="token punctuation">,</span>
+    <span class="token string">'dodefsum'</span><span class="token punctuation">,</span>
+    <span class="token string">'eof'</span><span class="token punctuation">,</span>
+    <span class="token string">'fun'</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  testList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">test</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">it</span><span class="token punctuation">(</span>test<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">runTest</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Compiler errors'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> basePath <span class="token operator">=</span> <span class="token string">'test/errors/'</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> testList <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'unexpected-token-comma'</span><span class="token punctuation">,</span> <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">Unexpected.*token.*,</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// { name: 'unexpected-eof',   error: /Unexpected.*EOF.*token/i },</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'unexpected-token-word'</span><span class="token punctuation">,</span> <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">Unexpected.*WORD.token</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">runTest</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">test</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">it</span><span class="token punctuation">(</span>test<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      assert<span class="token punctuation">.</span><span class="token function">throws</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">parseFromFile</span><span class="token punctuation">(</span>basePath <span class="token operator">+</span> test<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'.egg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> test<span class="token punctuation">.</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  testList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">test</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">runTest</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Se puede observar que en la variable testList se almacenan los nombres de aquellos archivos
+queremos incluir en nuestros tests. También se observa que hay dos grupos principales de
+tests, los que comprueban que se generen ASTs correctos y los que comprueban que
+determinadas entradas generen determinados errores.</p> <p>Al ejecutar los tests con mi versión de eggc, mediante un script definido en el package.json
+obtengo el siguiente resultado:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> @ull-esit-pl-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108@1.0.0 build
+<span class="token operator">&gt;</span> nearleyc src/egg.ne -o src/grammar.js
+
+  Compiler
+    ✔ array
+    ✔ <span class="token keyword">if</span>
+    ✔ scope
+    ✔ dodefsum
+    ✔ eof
+    ✔ fun
+
+  Compiler errors
+    ✔ unexpected-token-comma
+    ✔ unexpected-token-word
+
+  <span class="token number">8</span> passing <span class="token punctuation">(</span>34ms<span class="token punctuation">)</span>
+</code></pre></div><h2 id="publicacion-del-modulo-en-github-registry"><a href=".#publicacion-del-modulo-en-github-registry" class="header-anchor">#</a> Publicación del módulo en Github Registry</h2> <p>Se propone para esta práctica publicar el paquete en el registro de github. Para
 ello es necesario crear una cuenta de npm si no se dispone de una e identificarse
 con las credenciales utilizando el comando <code>npm login</code>. Adicionalmente, es
 necesario generar un token de uso personal de github y colocarlo en un fichero
-<code>.npmrc</code> que tendrá el siguiente contenido:</p> <div class="language- extra-class"><pre class="language-text"><code>registry=https://npm.pkg.github.com/ull-esit-pl-2122
+<code>.npmrc</code> que tendrá el siguiente contenido:</p> <div class="language- extra-class"><pre class="language-text"><code>registry'https://npm.pkg.github.com/ull-esit-pl-2122
 //npm.pkg.github.com/:_authToken=&lt;token&gt;
 </code></pre></div><p>Adicionalmente, es necesario editar el package.json de manera que incluya la siguiente
-información:</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@ull-esit-pl-2122/ast-types-sebastian-tamayo-guzman-alu0101131108&quot;</span><span class="token punctuation">,</span>
-<span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;alu0101131108&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;email&quot;</span><span class="token operator">:</span> <span class="token string">&quot;alu0101131108@ull.edu.es&quot;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Traduction from es6 operator to previous js versions.&quot;</span><span class="token punctuation">,</span>
+información:</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@ull-esit-pl-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Sebastián Daniel Tamayo Guzmán&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Lab for language processors&quot;</span><span class="token punctuation">,</span>
 <span class="token property">&quot;repository&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;git&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://github.com/ULL-ESIT-PL-2122/ast-types-sebastian-tamayo-guzman-alu0101131108&quot;</span>
+  <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot'https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108.git&quot;</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token property">&quot;publishConfig&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">&quot;registry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://npm.pkg.github.com/ull-esit-pl-2122&quot;</span>
+  <span class="token property">&quot;registry&quot;</span><span class="token operator">:</span> <span class="token string">&quot'https://npm.pkg.github.com/ull-esit-pl-2122&quot;</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token property">&quot;licenses&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span>
     <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MIT&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://github.com/brentertz/scapegoat/blob/master/LICENSE-MIT&quot;</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot'https://github.com/brentertz/scapegoat/blob/master/LICENSE-MIT&quot;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.1.1&quot;</span><span class="token punctuation">,</span>
-<span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/spread.js&quot;</span>
-</code></pre></div><p>El formato que sigue el nombre indica que el paquete será publicado con el ámbito
-de la organización <code>ull-esit-pl-2021</code> y bajo el nombre
-<code>ast-types-sebastian-tamayo-guzman-alu0101131108</code>.</p> <p>Una vez completados estos pasos se podrá publicar el paquete mediante el comando
-<code>npm publish</code>.</p> <p>Se debe incluir un README.md en el paquete con la documentación del módulo y este apareceraá
-en la página del registro de github de la siguiente manera:</p> <p><img src="./pic.jpg" alt="githubregistry"></p> <h2 id="vuepress"><a href="#vuepress" class="header-anchor">#</a> Vuepress</h2> <p>Por último, se propone realizar el informe con el generador de páginas estáticas <code>vuepress</code>.
+<span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;grammar.js&quot;</span><span class="token punctuation">,</span>
+</code></pre></div><p>El formato que sigue el nombre indica que el paquete será publicado con el ámbito de la organización <code>ull-esit-pl-2021</code> y bajo el nombre
+<code>egg-parser-sebastian-tamayo-guzman-alu0101131108</code>.</p> <p>Una vez completados estos pasos se podrá publicar el paquete mediante el comando
+<code>npm publish</code>.</p> <p>Se debe incluir un README.md en el paquete con la documentación del módulo y este aparecerá en la página del registro de github.</p> <h2 id="generacion-de-pagina-estatica-con-vuepress"><a href=".#generacion-de-pagina-estatica-con-vuepress" class="header-anchor">#</a> Generación de página estática con Vuepress</h2> <p>Por último, se propone realizar el informe con el generador de páginas estáticas <code>vuepress</code>.
 Esta herramienta permite la creación rapida de SPAs utilizando ficheros Markdown.
 Para ello primero es necesario instalar esta herramienta con ```npm install -g vuepress&quot;.
 A continuación, crear una carpeta con un readme que tendrá el contenido de la página
@@ -184,18 +275,36 @@ principal y otra carpeta .vuepress que contiene un archivo config.js con el sigu
   <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">'Práctica para la asignatura procesadores de lenguajes en la Universidad de La Laguna.'</span><span class="token punctuation">,</span>
   <span class="token literal-property property">themeConfig</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Inicio'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Documentación'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/api/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Coverage'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/cov/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Repositorio'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'https://github.com/ULL-ESIT-PL-2122/ast-types-sebastian-tamayo-guzman-alu0101131108.git'</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Report'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Documentation'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/jsdoc/index.html'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Coverage'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/coverage/lcov-report/index.html'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Repo'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108.git'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Package'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108/packages/1338834'</span>
+      <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>En este archivo hemos incluido una barra de navegación que dirige a otros archivos markdown
-con el contenido de la documentación, el estudio de coverage y un enlace al repositorio.
+</code></pre></div><p>En este archivo hemos incluido una barra de navegación que dirige a otros archivos
+con el contenido de la documentación, el estudio de coverage, un enlace al repositorio y otro al paquete.
 Podemos utilizar el comando <code>vuepress dev</code> para iniciar un servidor local y poder ir
 viendo el resultado.</p> <p>Para finalizar, es necesario ejecutar el comando <code>vuepress build</code> que construye la carpeta que
-podemos desplegar en github pages.</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="./assets/js/app.9302cb63.js" defer></script><script src="./assets/js/2.d3be6320.js" defer></script><script src="./assets/js/15.b4697afd.js" defer></script>
+podemos desplegar en github pages.</p></div> <div class="footer">
+    Made by Sebastián Tamayo Guzmán with ❤️
+  </div></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6452aae2.js" defer></script><script src="/assets/js/2.2c19e274.js" defer></script><script src="/assets/js/10.9880244f.js" defer></script>
   </body>
 </html>
