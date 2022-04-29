@@ -3,542 +3,341 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lexer Generator</title>
+    <title>Egg Interpreter</title>
     <meta name="generator" content="VuePress 1.9.7">
     
-    <meta name="description" content="PL - Universidad de La Laguna">
+    <meta name="description" content="">
     
-    <link rel="preload" href="./assets/css/0.styles.f1456810.css" as="style"><link rel="preload" href="./assets/js/app.9c667f20.js" as="script"><link rel="preload" href="./assets/js/2.2c19e274.js" as="script"><link rel="preload" href="./assets/js/8.1d776418.js" as="script"><link rel="prefetch" href="./assets/js/3.310fc308.js"><link rel="prefetch" href="./assets/js/4.0d8f90e9.js"><link rel="prefetch" href="./assets/js/5.5f81c412.js"><link rel="prefetch" href="./assets/js/6.2f3f3a69.js"><link rel="prefetch" href="./assets/js/7.4e603f86.js">
+    <link rel="preload" href="./assets/css/0.styles.f1456810.css" as="style"><link rel="preload" href="./assets/js/app.64c68616.js" as="script"><link rel="preload" href="./assets/js/2.2c19e274.js" as="script"><link rel="preload" href="./assets/js/7.174b8db1.js" as="script"><link rel="prefetch" href="./assets/js/3.79b60fea.js"><link rel="prefetch" href="./assets/js/4.0d8f90e9.js"><link rel="prefetch" href="./assets/js/5.5f81c412.js"><link rel="prefetch" href="./assets/js/6.2f3f3a69.js">
     <link rel="stylesheet" href="./assets/css/0.styles.f1456810.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="./" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">Lexer Generator</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="./api/" class="nav-link">
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="./" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">Egg Interpreter</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="./docs-jsdoc/index.html" class="nav-link">
   Documentation
-</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108/packages/1353838" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  Package
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/ULL-ESIT-PL-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+</a></div><div class="nav-item"><a href="./lcov-report/index.html" class="nav-link">
+  Coverage
+</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/egg-interpreter-sebastian-tamayo-guzman-alu0101131108/packages/1392062" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Module
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/ULL-ESIT-PL-2122/egg-interpreter-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
-    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="./api/" class="nav-link">
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="./docs-jsdoc/index.html" class="nav-link">
   Documentation
-</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108/packages/1353838" target="_blank" rel="noopener noreferrer" class="nav-link external">
-  Package
-  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/ULL-ESIT-PL-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+</a></div><div class="nav-item"><a href="./lcov-report/index.html" class="nav-link">
+  Coverage
+</a></div><div class="nav-item"><a href="https://github.com/ULL-ESIT-PL-2122/egg-interpreter-sebastian-tamayo-guzman-alu0101131108/packages/1392062" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Module
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/ULL-ESIT-PL-2122/egg-interpreter-sebastian-tamayo-guzman-alu0101131108.git" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
     <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><!----> <h1 id="main-title">
-      Lexer Generator
+      Egg Interpreter
     </h1> <p class="description">
-      PL - Universidad de La Laguna
-    </p> <!----></header> <!----> <div class="theme-default-content custom content__default"><h1 id="descripcion-de-la-tarea"><a href="#descripcion-de-la-tarea" class="header-anchor">#</a> Descripción de la tarea</h1> <p>En esta tarea se pretende construir un módulo de JavaScript que provea de dos funciones principales, buildLexer y nearlyLexer.
-Ambas sirven para construir analizadores léxicos en función de las expresiones regulares que se les pasen por parámetros. Ambas
-funciones, además de retornar la función que actua como analizador léxico, devuelve también un mapa de Javascript que contiene los
-tipos de token como llaves y sus expresiones regulares asociadas.</p> <p>Cabe destacar que la función nearlyLexer está pensada para que sea utilizada junto a NearlyJS, es decir que son compatibles.</p> <h1 id="contructores-de-analizadores-lexicos"><a href="#contructores-de-analizadores-lexicos" class="header-anchor">#</a> Contructores de analizadores léxicos</h1> <p>Para el desarrollo de la función buildLexer, es necesario empezar construyendo el Mapa validTokens y añadiendo en él los valores recibidos
-por el parámetro regexps. Cada expresión regular es tratada por la función ya proporcionada checkRegExpIsNamed, que comprueba que estas
-tengan un formato adecuado y devuelve el nombre asociado. Además, se incluye el token de error que servirá para encapsular los errores
-que se pueda encontrar el analizador léxico. Cabe destacar que si alguna expresión regular no tiene un nombre o tiene un nombre repetido,
-se lanzarán los errores pertinentes.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">buildLexer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">regexps</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token comment">// Create and populate the Map.</span>
-  <span class="token keyword">let</span> validTokens <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  regexps<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;ERROR&gt;.+)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  regexps<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">regex</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token function">checkRegExpIsNamed</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>name<span class="token punctuation">)</span>
-      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;Regular expression must be named&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>validTokens<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
-      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;Regular expression must be unique&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    validTokens<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token comment">// (...)</span>
-<span class="token punctuation">}</span>
-</code></pre></div><p>A continuación, es necesario unificar todas las expresiones regulares como una única. Esto se consigue uniéndolas
-todas sus fuentes con un separador OR (|). Además, al crear la nueva expresión regular global, se especificará el uso de
-dos flags: 'y' e 'u'. La primera servirá para que cuando la expresión regular busque matches ante una entrada, lo haga solo
-desde el caracter indicado por lastIndex. La segunda indica que se desea utilizar una codificación de caracteres UNICODE.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>  <span class="token keyword">const</span> regexSources <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>validTokens<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">regex</span> <span class="token operator">=&gt;</span> regex<span class="token punctuation">.</span>source<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> sourcesJoin <span class="token operator">=</span> regexSources<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'|'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> regex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>sourcesJoin<span class="token punctuation">,</span> <span class="token string">'yu'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre></div><p>Para continuar, se procede a crear la función que actuará como analizador léxico. Esta iterará los matches de la expresión regular
-principal ante la entrada, para poder obtener la información relacionada a ese token. De esta manera, se seguirá ejecutando la búsqueda
-de algun match mediante &quot;regex.exec(string)&quot;, y mientras se encuentre uno, se iterará sobre su atributo groups hasta encontrar del que se trata
-para poder almacenar su información. La información de cada token que sea reconocido deberá ser almacenada en el array resultado, a no ser
-que el flag skip esté puesto a true, en ese caso no se quiere almacenar información relativa al token. Por último, tener en cuenta otro atributo
-de los tokens, el PostProcessor. Esta es una función que será utilizada despues de la lectura del token para transformar su atributo value.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> <span class="token function-variable function">lexer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">string<span class="token punctuation">,</span> line <span class="token operator">=</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> matches<span class="token punctuation">,</span> col<span class="token punctuation">,</span> offset <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>matches <span class="token operator">=</span> regex<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment">// Find the token group, value and skip flag.</span>
-      <span class="token keyword">let</span> groups <span class="token operator">=</span> matches<span class="token punctuation">.</span>groups<span class="token punctuation">;</span>
-      <span class="token keyword">let</span> tokenType<span class="token punctuation">,</span> tokenValue<span class="token punctuation">,</span> tokenSkip<span class="token punctuation">,</span> tokenPostProcessor<span class="token punctuation">;</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> type <span class="token keyword">in</span> groups<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>groups<span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token operator">!</span>validTokens<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
-        tokenType <span class="token operator">=</span> type<span class="token punctuation">;</span>
-        tokenValue <span class="token operator">=</span> groups<span class="token punctuation">[</span>type<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        tokenSkip <span class="token operator">=</span> validTokens<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">.</span>skip<span class="token punctuation">;</span>
-        tokenPostProcessor <span class="token operator">=</span> validTokens<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token parameter">t</span> <span class="token operator">=&gt;</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">break</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+      Welcome to your VuePress site
+    </p> <!----></header> <!----> <div class="theme-default-content custom content__default"><h2 id="modificacion-del-modulo-egg-parser"><a href="#modificacion-del-modulo-egg-parser" class="header-anchor">#</a> Modificación del Módulo Egg-Parser</h2> <p>En primer lugar se ha modificado el módulo Egg-Parser creado en prácticas anteriores. La modificación consiste
+en que ahora hace uso del módulo Lexer-Generator para generar un analizador léxico capaz de analizar código de Egg.</p> <p>Se puede observar en el siguiente código que se incluye la función nearleyLexer del módulo Lexer-Generator. Esta función
+recibe una lista de tokens, que consisten principalmente en las expresiones regulares que se aceptarán. El analizador
+léxico que genera está pensado para que sea compatible con Nearley.js.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> nearleyLexer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;@ull-esit-pl-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      <span class="token comment">// Calculate the column and line values.</span>
-      col <span class="token operator">=</span> <span class="token punctuation">(</span>matches<span class="token punctuation">.</span>index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">-</span> offset<span class="token punctuation">;</span>
-      <span class="token keyword">let</span> newlineCount <span class="token operator">=</span> <span class="token punctuation">(</span>tokenValue<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\n</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>newlineCount <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        line <span class="token operator">+=</span> newlineCount<span class="token punctuation">;</span>
-        offset <span class="token operator">+=</span> col <span class="token operator">+</span> <span class="token punctuation">(</span>tokenValue<span class="token punctuation">.</span>length <span class="token operator">-</span> newlineCount<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token constant">WHITES</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;WHITES&gt;[\s]+)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span> <span class="token constant">WHITES</span><span class="token punctuation">.</span>skip <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token constant">WHITES</span><span class="token punctuation">.</span>lineBreaks <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">HASHTAG</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;HASHTAG&gt;#[^\n]*)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span> <span class="token constant">HASHTAG</span><span class="token punctuation">.</span>skip <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">ML_COMMENT</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;ML_COMMENT&gt;\/\*[^]*?\*\/)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span> <span class="token constant">ML_COMMENT</span><span class="token punctuation">.</span>skip <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">SL_COMMENT</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;SL_COMMENT&gt;\/\/.*)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span> <span class="token constant">SL_COMMENT</span><span class="token punctuation">.</span>skip <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">NUMBER</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;NUMBER&gt;[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span> <span class="token constant">NUMBER</span><span class="token punctuation">.</span><span class="token function-variable function">value</span> <span class="token operator">=</span> <span class="token parameter">x</span> <span class="token operator">=&gt;</span> <span class="token function">Number</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">STRING</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;STRING&gt;&quot;(?:[^&quot;\\]|\\.)*&quot;)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">WORD</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;WORD&gt;[^\s(),&quot;]+)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">LEFTP</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;LP&gt;\()</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">RIGHTP</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;RP&gt;\))</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">COMMA</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;COMMA&gt;,)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
 
-      <span class="token comment">// Skip or add token data.</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>tokenSkip <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
-      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> tokenType<span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token function">tokenPostProcessor</span><span class="token punctuation">(</span>tokenValue<span class="token punctuation">)</span><span class="token punctuation">,</span>
-        col<span class="token punctuation">,</span>
-        line<span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> tokenValue<span class="token punctuation">.</span>length
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre></div><p>Por último, se retornan tanto el mapa validTokens como la función lexer.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">return</span> <span class="token punctuation">{</span> validTokens<span class="token punctuation">,</span> lexer <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre></div><p>Cabe destacar que el código de la función nearlyLexer ya viene implementado y utiliza la funcion buildLexer para
-extender su funcionalidad haciendola compatible con NearlyJS al añadir una serie de atributos más.</p> <h1 id="tests"><a href="#tests" class="header-anchor">#</a> Tests</h1> <p>Se han realizado una serie de test con Jest para comprobar el correcto funcionamiento del programa. Se puede observar que se han añadido
-tests para comprobar el funcionamiento de buildLexer, el funcionamiento de buildLexer cuando se incluyen caracteres unicode, que funcione el atributo .value para indicar un post procesador, y para comprobar que nearlyLexer se ejecuta correctamente.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span> buildLexer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/main.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> tokens <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token constant">WHITES</span><span class="token punctuation">,</span> <span class="token constant">HASHTAG</span><span class="token punctuation">,</span> <span class="token constant">ML_COMMENT</span><span class="token punctuation">,</span> <span class="token constant">SL_COMMENT</span><span class="token punctuation">,</span> <span class="token constant">NUMBER</span><span class="token punctuation">,</span> <span class="token constant">STRING</span><span class="token punctuation">,</span> <span class="token constant">WORD</span><span class="token punctuation">,</span> <span class="token constant">LEFTP</span><span class="token punctuation">,</span> <span class="token constant">RIGHTP</span><span class="token punctuation">,</span> <span class="token constant">COMMA</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> <span class="token constant">SPACE</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;SPACE&gt;\s+|\/\/.*)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span> <span class="token constant">SPACE</span><span class="token punctuation">.</span>skip <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">RESERVEDWORD</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;RESERVEDWORD&gt;\b(const|let)\b)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">ID</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;ID&gt;\b([a-z_]\w*)\b)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">STRING</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;STRING&gt;&quot;([^\\&quot;]|\\.&quot;)*&quot;)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">OP</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;OP&gt;[+*\/=-])</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">OP_UNICODE</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;OP&gt;[+*💠\/=-])</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token constant">NUMBER</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;NUMBER&gt;\d+)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span> <span class="token constant">NUMBER</span><span class="token punctuation">.</span><span class="token function-variable function">value</span> <span class="token operator">=</span> <span class="token parameter">v</span> <span class="token operator">=&gt;</span> <span class="token function">Number</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> lexer <span class="token operator">=</span> <span class="token function">nearleyLexer</span><span class="token punctuation">(</span>tokens<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'buildLexer'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> myTokens <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token constant">SPACE</span><span class="token punctuation">,</span>
-    <span class="token constant">RESERVEDWORD</span><span class="token punctuation">,</span>
-    <span class="token constant">ID</span><span class="token punctuation">,</span>
-    <span class="token constant">STRING</span><span class="token punctuation">,</span>
-    <span class="token constant">OP</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> lexer<span class="token punctuation">;</span>
+</code></pre></div><p>Se añade además un archivo parse.js que contendrá la lógica asociada a las tareas de parseado de manera conjunta.
+Para ello incluye la función parse(), que recibe un código en Egg y se encarga de construir un Parser del módulo Nearley,
+utilizando la gramática construida previamente haciendo uso del analizador léxico y de un archivo egg.ne. A continuación,
+parsea el código de entrada y genera un AST de nodos JSON, con los atributos de los tokens encontrados, que es devuelto
+como resultado.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> nearley <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;nearley&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> grammar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./src/grammar.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> lexer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">buildLexer</span><span class="token punctuation">(</span>myTokens<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Assignment to string'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'const varName = &quot;value&quot;'</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">lexer</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'RESERVEDWORD'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'const'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'varName'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'='</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'&quot;value&quot;'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">17</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Assingment spanning two lines'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'let x = a + \nb'</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">lexer</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'RESERVEDWORD'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'let'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'x'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'='</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'+'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'b'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Input with errors'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">' // Input with errors\nlet x = 42*c\nconst a = b'</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">lexer</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'RESERVEDWORD'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'let'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'x'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'='</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ERROR'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'42*c'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'RESERVEDWORD'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'const'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'='</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'b'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">11</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Input with errors that aren\'t at the end of the line'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'let 2x = &quot;hello&quot;'</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">lexer</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'RESERVEDWORD'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'let'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ERROR'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span>  <span class="token string">&quot;2x = \&quot;hello\&quot;&quot;</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Shouldn\'t be possible to use unnamed Regexps'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> <span class="token constant">OP</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">([+*\/=-])</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-
-    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">buildLexer</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token constant">OP</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lexer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toThrowError</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">named</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Shouldn\'t be possible to use Regexps named more than once'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> <span class="token constant">OP</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;OP&gt;(?&lt;OP2&gt;[+*\/=-]))</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-
-    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">buildLexer</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token constant">OP</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lexer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toThrowError</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">named</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Should be possible to use Regexps with look behinds'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> <span class="token constant">OP</span> <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;OP&gt;a(?&lt;=b))</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
-
-    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">buildLexer</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token constant">OP</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lexer<span class="token punctuation">)</span><span class="token punctuation">.</span>not<span class="token punctuation">.</span><span class="token function">toThrowError</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">named</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'buildLexer with unicode'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> myTokens <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token constant">SPACE</span><span class="token punctuation">,</span>
-    <span class="token constant">RESERVEDWORD</span><span class="token punctuation">,</span>
-    <span class="token constant">ID</span><span class="token punctuation">,</span>
-    <span class="token constant">STRING</span><span class="token punctuation">,</span>
-    <span class="token constant">OP_UNICODE</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> lexer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">buildLexer</span><span class="token punctuation">(</span>myTokens<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Use of emoji operation'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'const varName = &quot;value&quot; 💠 &quot;a&quot;'</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">lexer</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'RESERVEDWORD'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'const'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'varName'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'='</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'&quot;value&quot;'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">17</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'💠'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'STRING'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'&quot;a&quot;'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">28</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Post-processor value'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> myTokens <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token constant">SPACE</span><span class="token punctuation">,</span>
-    <span class="token constant">RESERVEDWORD</span><span class="token punctuation">,</span>
-    <span class="token constant">ID</span><span class="token punctuation">,</span>
-    <span class="token constant">NUMBER</span><span class="token punctuation">,</span>
-    <span class="token constant">STRING</span><span class="token punctuation">,</span>
-    <span class="token constant">OP</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">const</span> <span class="token punctuation">{</span> lexer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">buildLexer</span><span class="token punctuation">(</span>myTokens<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Post-processor works fine'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'const dummy = 0'</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">lexer</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'RESERVEDWORD'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'const'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ID'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'dummy'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'OP'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'='</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">13</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'NUMBER'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">col</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">line</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">length</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'lexerNearly function works fine'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> nearley <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;nearley&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> testGrammar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;../test/test-grammar.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">const</span> eggGrammar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./egg/grammar.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'It\'s compatible with Nearley'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> input <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-     fun (id, idtwo, idthree)  
-       do   #hello
-         do end;
-         do end # another comment
-       end 
-     end</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">nearley<span class="token punctuation">.</span>Parser</span><span class="token punctuation">(</span>nearley<span class="token punctuation">.</span>Grammar<span class="token punctuation">.</span><span class="token function">fromCompiled</span><span class="token punctuation">(</span>testGrammar<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">parse</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">input</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> astJson<span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">nearley<span class="token punctuation">.</span>Parser</span><span class="token punctuation">(</span>nearley<span class="token punctuation">.</span>Grammar<span class="token punctuation">.</span><span class="token function">fromCompiled</span><span class="token punctuation">(</span>grammar<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     parser<span class="token punctuation">.</span><span class="token function">feed</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> result <span class="token operator">=</span> parser<span class="token punctuation">.</span>results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> expected <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'fun'</span><span class="token punctuation">,</span> <span class="token string">'lp'</span><span class="token punctuation">,</span> <span class="token string">'identifier'</span><span class="token punctuation">,</span> <span class="token string">'comma'</span><span class="token punctuation">,</span>
-      <span class="token string">'identifier'</span><span class="token punctuation">,</span> <span class="token string">'comma'</span><span class="token punctuation">,</span> <span class="token string">'identifier'</span><span class="token punctuation">,</span> <span class="token string">'rp'</span><span class="token punctuation">,</span>
-      <span class="token string">'dolua'</span><span class="token punctuation">,</span> <span class="token string">'dolua'</span><span class="token punctuation">,</span> <span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token string">'semicolon'</span><span class="token punctuation">,</span>
-      <span class="token string">'dolua'</span><span class="token punctuation">,</span> <span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token string">'EOF'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toEqual</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre></div><p>El resultado de ejecutar estos test es el siguiente.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>usuario@ubuntu ~/LexerGenerator <span class="token punctuation">(</span>master<span class="token punctuation">)</span> $ <span class="token function">npm</span> <span class="token builtin class-name">test</span>
-
-<span class="token operator">&gt;</span> @ull-esit-pl-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108@1.0.3 <span class="token builtin class-name">test</span>
-<span class="token operator">&gt;</span> jest --coverage
-
- PASS  test/build-lexer.test.js
-  buildLexer
-    ✓ Assignment to string <span class="token punctuation">(</span><span class="token number">6</span> ms<span class="token punctuation">)</span>
-    ✓ Assingment spanning two lines <span class="token punctuation">(</span><span class="token number">2</span> ms<span class="token punctuation">)</span>
-    ✓ Input with errors <span class="token punctuation">(</span><span class="token number">2</span> ms<span class="token punctuation">)</span>
-    ✓ Input with errors that aren<span class="token string">'t at the end of the line
-    ✓ Shouldn'</span>t be possible to use unnamed Regexps <span class="token punctuation">(</span><span class="token number">9</span> ms<span class="token punctuation">)</span>
-    ✓ Shouldn<span class="token string">'t be possible to use Regexps named more than once (1 ms)
-    ✓ Should be possible to use Regexps with look behinds (1 ms)
-  buildLexer with unicode
-    ✓ Use of emoji operation (1 ms)
-  Post-processor value
-    ✓ Post-processor works fine (1 ms)
-  lexerNearly function works fine
-    ✓ It'</span>s compatible with Nearley <span class="token punctuation">(</span><span class="token number">5</span> ms<span class="token punctuation">)</span>
-
-------------------<span class="token operator">|</span>---------<span class="token operator">|</span>----------<span class="token operator">|</span>---------<span class="token operator">|</span>---------<span class="token operator">|</span>-------------------
-File              <span class="token operator">|</span> % Stmts <span class="token operator">|</span> % Branch <span class="token operator">|</span> % Funcs <span class="token operator">|</span> % Lines <span class="token operator">|</span> Uncovered Line <span class="token comment">#s </span>
-------------------<span class="token operator">|</span>---------<span class="token operator">|</span>----------<span class="token operator">|</span>---------<span class="token operator">|</span>---------<span class="token operator">|</span>-------------------
-All files         <span class="token operator">|</span>   <span class="token number">82.35</span> <span class="token operator">|</span>     <span class="token number">71.7</span> <span class="token operator">|</span>   <span class="token number">46.67</span> <span class="token operator">|</span>   <span class="token number">82.08</span> <span class="token operator">|</span>                   
- src              <span class="token operator">|</span>   <span class="token number">96.83</span> <span class="token operator">|</span>    <span class="token number">88.89</span> <span class="token operator">|</span>   <span class="token number">91.67</span> <span class="token operator">|</span>   <span class="token number">96.61</span> <span class="token operator">|</span>                   
-  main.js         <span class="token operator">|</span>   <span class="token number">96.83</span> <span class="token operator">|</span>    <span class="token number">88.89</span> <span class="token operator">|</span>   <span class="token number">91.67</span> <span class="token operator">|</span>   <span class="token number">96.61</span> <span class="token operator">|</span> <span class="token number">41,149</span>            
- <span class="token builtin class-name">test</span>             <span class="token operator">|</span>   <span class="token number">84.62</span> <span class="token operator">|</span>    <span class="token number">57.14</span> <span class="token operator">|</span>   <span class="token number">66.67</span> <span class="token operator">|</span>   <span class="token number">81.82</span> <span class="token operator">|</span>                   
-  test-grammar.js <span class="token operator">|</span>   <span class="token number">84.62</span> <span class="token operator">|</span>    <span class="token number">57.14</span> <span class="token operator">|</span>   <span class="token number">66.67</span> <span class="token operator">|</span>   <span class="token number">81.82</span> <span class="token operator">|</span> <span class="token number">4,44</span>              
- test/egg         <span class="token operator">|</span>   <span class="token number">60.47</span> <span class="token operator">|</span>       <span class="token number">50</span> <span class="token operator">|</span>    <span class="token number">6.67</span> <span class="token operator">|</span>   <span class="token number">58.33</span> <span class="token operator">|</span>                   
-  build-ast.js    <span class="token operator">|</span>   <span class="token number">16.67</span> <span class="token operator">|</span>        <span class="token number">0</span> <span class="token operator">|</span>       <span class="token number">0</span> <span class="token operator">|</span>      <span class="token number">20</span> <span class="token operator">|</span> <span class="token number">13</span>-43             
-  grammar.js      <span class="token operator">|</span>   <span class="token number">35.29</span> <span class="token operator">|</span>       <span class="token number">60</span> <span class="token operator">|</span>    <span class="token number">9.09</span> <span class="token operator">|</span>   <span class="token number">35.29</span> <span class="token operator">|</span> <span class="token number">4,11</span>-20,27        
-  lex.js          <span class="token operator">|</span>      <span class="token number">95</span> <span class="token operator">|</span>      <span class="token number">100</span> <span class="token operator">|</span>       <span class="token number">0</span> <span class="token operator">|</span>     <span class="token number">100</span> <span class="token operator">|</span>                   
-------------------<span class="token operator">|</span>---------<span class="token operator">|</span>----------<span class="token operator">|</span>---------<span class="token operator">|</span>---------<span class="token operator">|</span>-------------------
-Test Suites: <span class="token number">1</span> passed, <span class="token number">1</span> total
-Tests:       <span class="token number">10</span> passed, <span class="token number">10</span> total
-Snapshots:   <span class="token number">0</span> total
-Time:        <span class="token number">3.712</span> s
-Ran all <span class="token builtin class-name">test</span> suites.
-</code></pre></div><h2 id="publicacion-del-modulo-en-github-registry"><a href="#publicacion-del-modulo-en-github-registry" class="header-anchor">#</a> Publicación del módulo en Github Registry</h2> <p>Se propone para esta práctica publicar el paquete en el registro de github. Para
-ello es necesario crear una cuenta de npm si no se dispone de una e identificarse
-con las credenciales utilizando el comando <code>npm login</code>. Adicionalmente, es
-necesario generar un token de uso personal de github y colocarlo en un fichero
-<code>.npmrc</code> que tendrá el siguiente contenido:</p> <div class="language- extra-class"><pre class="language-text"><code>registry=https://npm.pkg.github.com/ull-esit-pl-2122
-//npm.pkg.github.com/:_authToken=&lt;token&gt;
-</code></pre></div><p>Adicionalmente, es necesario editar el package.json de manera que incluya la siguiente
-información:</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@ull-esit-pl-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108&quot;</span><span class="token punctuation">,</span>
-<span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Sebastián Daniel Tamayo Guzmán&quot;</span><span class="token punctuation">,</span>
-<span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Lab for language processors&quot;</span><span class="token punctuation">,</span>
-<span class="token property">&quot;repository&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;git&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;git+https://github.com/ULL-ESIT-PL-2122/lexer-generator-sebastian-tamayo-guzman-alu0101131108.git&quot;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token property">&quot;publishConfig&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">&quot;registry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://npm.pkg.github.com/ull-esit-pl-2122&quot;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token property">&quot;licenses&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-  <span class="token punctuation">{</span>
-    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MIT&quot;</span><span class="token punctuation">,</span>
-    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://github.com/brentertz/scapegoat/blob/master/LICENSE-MIT&quot;</span>
+    astJson <span class="token operator">=</span> parser<span class="token punctuation">.</span>results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// console.log( JSON.stringify(ast, null, 2) );</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.3&quot;</span><span class="token punctuation">,</span>
-<span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/main.js&quot;</span>
-</code></pre></div><p>El formato que sigue el nombre indica que el paquete será publicado con el ámbito de la organización <code>ull-esit-pl-2021</code> y bajo el nombre
-<code>lexer-generator-sebastian-tamayo-guzman-alu0101131108</code>.</p> <p>Una vez completados estos pasos se podrá publicar el paquete mediante el comando
-<code>npm publish</code>.</p> <p>Se debe incluir un README.md en el paquete con la documentación del módulo y este aparecerá en la página del registro de github.</p> <h2 id="generacion-de-pagina-estatica-con-vuepress"><a href="#generacion-de-pagina-estatica-con-vuepress" class="header-anchor">#</a> Generación de página estática con Vuepress</h2> <p>Por último, se propone realizar el informe con el generador de páginas estáticas <code>vuepress</code>.
-Esta herramienta permite la creación rapida de SPAs utilizando ficheros Markdown.
-Para ello primero es necesario instalar esta herramienta con ```npm install -g vuepress&quot;.
-A continuación, crear una carpeta con un readme que tendrá el contenido de la página
-principal y otra carpeta .vuepress que contiene un archivo config.js con el siguiente contenido:</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'Lexer Generator'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">'Práctica para la asignatura procesadores de lenguajes en la Universidad de La Laguna.'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">themeConfig</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Documentation'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/jsdoc/index.html'</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Package'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'https://github.com/ULL-ESIT-PL-2122/egg-parser-sebastian-tamayo-guzman-alu0101131108/packages/1338834'</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
+  <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> e<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> astJson<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Similar a parse(), se incluyen en los exports una función que realiza el mismo proceso pero
+leyendo el código de entrada de un archivo. También incluye una función parBalance(line) que
+analiza una cadena de texto asociada a un código en Egg y devuelve un entero asociado con la
+coherencia de los paréntesis. Por último, se incluye también getTokens(), una función perteneciente
+al analizador léxico, para poder obtener la lista de tokens reconocidos a partir de una cadena
+de texto.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> getTokens <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./lex.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lexer<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">parBalance</span><span class="token punctuation">(</span><span class="token parameter">line</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> stack <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> tokens <span class="token operator">=</span> <span class="token function">getTokens</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> token <span class="token keyword">of</span> tokens<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>token<span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'LP'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      stack<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>token<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'RP'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      stack<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> stack<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="implementacion-del-modulo-egg-interpreter"><a href="#implementacion-del-modulo-egg-interpreter" class="header-anchor">#</a> Implementación del Módulo Egg-Interpreter</h2> <h3 id="utils-colors-extensions-y-registry"><a href="#utils-colors-extensions-y-registry" class="header-anchor">#</a> Utils, Colors, Extensions y Registry</h3> <p>Estos cuatro archivos los proporciona el profesor ya desarrollados Contienen funcionalidades varias para enriquezer
+el resultado de la práctica. Conviene mencionar el archivo registry.js, pues en el se crean dos objetos que no heredan
+su prototipo de la clase Object y serán muy importantes en los siguientes archivos.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> specialForms <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> topEnv <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="ast-y-j2a"><a href="#ast-y-j2a" class="header-anchor">#</a> Ast y J2A</h3> <p>El archivo ast.js contiene tres clases que pueden asociarse a cada tipo de nodo en un árbol de análisis sintáctico de un
+programa Egg. Estas tres clases son Value, con atributos type y value; Word, con atributos type y name; y Apply, con atributos
+type, operator y args. Además, cada una de ellas tiene uno o varios métodos para evaluar su propio resultado.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Value</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">token</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> token<span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token function">isNaN</span><span class="token punctuation">(</span>token<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token operator">?</span> token<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">&quot;</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">:</span> token<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>En este archivo hemos incluido una barra de navegación que dirige a otros archivos
-con el contenido de la documentación, un enlace al repositorio y otro al paquete.
-Podemos utilizar el comando <code>vuepress dev</code> para iniciar un servidor local y poder ir
-viendo el resultado.</p> <p>Para finalizar, es necesario ejecutar el comando <code>vuepress build</code> que construye la carpeta que
-podemos desplegar en github pages.</p></div> <div class="footer">
+
+<span class="token keyword">class</span> <span class="token class-name">Word</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">token</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> token<span class="token punctuation">.</span>type <span class="token operator">||</span> <span class="token string">'word'</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> token<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token parameter">env</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token keyword">in</span> env<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> env<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> 
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ReferenceError</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Undefined variable: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">leftEvaluate</span><span class="token punctuation">(</span><span class="token parameter">env</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> scope <span class="token operator">=</span> env<span class="token punctuation">;</span> scope<span class="token punctuation">;</span> scope <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>scope<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>scope<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> scope<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ReferenceError</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Tried setting an undefined variable: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Apply</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">tree</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> tree<span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>operator <span class="token operator">=</span> tree<span class="token punctuation">.</span>operator<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>args <span class="token operator">=</span> tree<span class="token punctuation">.</span>args<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">evaluate</span><span class="token punctuation">(</span><span class="token parameter">env</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>operator<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'word'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>operator<span class="token punctuation">.</span>name <span class="token keyword">in</span> specialForms<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> specialForms<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>operator<span class="token punctuation">.</span>name<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>args<span class="token punctuation">,</span> env<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">let</span> op <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>operator<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> argsProcessed <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>args<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">arg</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> arg<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> op <span class="token operator">===</span> <span class="token string">&quot;function&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">op</span><span class="token punctuation">(</span><span class="token operator">...</span>argsProcessed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">'Applying not a function or method '</span> <span class="token operator">+</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Cada una de estas clases es construible partiendo de un nodo en formato JSON. Se pretende que se construyan a partir del AST
+de nodos JSON generado por la función parse() previamente descrita. Esta tarea se encuentra en el archivo j2a.js, en la función
+json2AST. Se encarga de recorrer recursivamente un AST de nodos json e ir generando un AST que tiene objetos de las clases descritas
+anteriormente.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> j2a <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+j2a<span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">j</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Value</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+j2a<span class="token punctuation">[</span><span class="token string">'word'</span><span class="token punctuation">]</span>  <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">j</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Word</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+j2a<span class="token punctuation">[</span><span class="token string">'apply'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">j</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Apply</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">json2AST</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'apply'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Apply</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'apply'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">operator</span><span class="token operator">:</span> <span class="token function">json2AST</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>operator<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">args</span><span class="token operator">:</span> node<span class="token punctuation">.</span>args<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">tree</span> <span class="token operator">=&gt;</span> <span class="token function">json2AST</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> j2a<span class="token punctuation">[</span>node<span class="token punctuation">.</span>type<span class="token punctuation">]</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="egg-interpreter"><a href="#egg-interpreter" class="header-anchor">#</a> Egg-interpreter</h3> <p>En este archivo se incluyen muchos valores dentro de los HashMaps specialForms y topEnv creados previamente en el archivo
+Registry.js. En specialForms se incluyen varias funciones que serán necesarias durante la evaluación de los nodos, ya que
+estarán asociadas a sentencias como def, set o if, y además estarán encargadas de continuar el proceso de evaluación de
+sus nodos hijos. Por ejemplo, la función asociada al operador if, comprueba tener 3 argumentos, y retorna la evaluación del
+segundo o tercer argumento según el resultado la evaluación del primer argumento.</p> <div class="language-js extra-class"><pre class="language-js"><code>specialForms<span class="token punctuation">[</span><span class="token string">'if'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">args<span class="token punctuation">,</span> env</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">.</span>length <span class="token operator">!=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">SyntaxError</span><span class="token punctuation">(</span><span class="token string">'Bad number of args to if'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> args<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> args<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>El HashMap topEnv actuará como la memoria de más alto nivel del programa. De hecho, será el objeto del cual heredarán su
+prototipo el resto de ámbitos de memoria del programa, directa o indirectamente. En el se incluyen inicialmente una serie
+de primitivas con la finalidad de añadir más funcionalidades al programa.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// (...)</span>
+topEnv<span class="token punctuation">[</span><span class="token string">'null'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+topEnv<span class="token punctuation">[</span><span class="token string">'true'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+topEnv<span class="token punctuation">[</span><span class="token string">'false'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+topEnv<span class="token punctuation">[</span><span class="token string">'undefined'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+topEnv<span class="token punctuation">[</span><span class="token string">'null'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+topEnv<span class="token punctuation">[</span><span class="token string">'Math'</span><span class="token punctuation">]</span> <span class="token operator">=</span> Math<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> operators <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'+'</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">,</span> <span class="token string">'**'</span><span class="token punctuation">,</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token string">'=='</span><span class="token punctuation">,</span> <span class="token string">'&lt;'</span><span class="token punctuation">,</span> <span class="token string">'&lt;='</span><span class="token punctuation">,</span> <span class="token string">'&gt;'</span><span class="token punctuation">,</span> <span class="token string">'&gt;='</span><span class="token punctuation">,</span> <span class="token string">'&amp;&amp;'</span><span class="token punctuation">,</span> <span class="token string">'||'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+operators<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">op</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  topEnv<span class="token punctuation">[</span>op<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Function</span><span class="token punctuation">(</span><span class="token string">'a, b'</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">return a </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>op<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> b;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// `return s.reduce((a,b) =&gt; a ${op} b);`</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Para concluir con el interpreter, se desarrollan tres funciones. La principal es run(program), se encarga de
+parsear el código Egg que recibe en una cadena de texto por parámetro, generando un AST de nodos JSON. Luego
+traduce este AST JSON a un AST que tiene objetos de las clases de ast.js como nodos. A continuación, inicia la
+cadena de ejecución de las funciones evaluate de los nodos del arbol empezando por la raíz. La función devuelve
+el valor computado de la evaluación del nuevo AST.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token parameter">program</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> ast <span class="token operator">=</span> <span class="token function">parse</span><span class="token punctuation">(</span>program<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> tree <span class="token operator">=</span> <span class="token function">json2AST</span><span class="token punctuation">(</span>ast<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> env <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>topEnv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> tree<span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Last funciones runFromFile(filepath) y runFromEvm(filepath) son otras funciones similares que exporta este archivo.
+La primera es igual a run, salvo que el código Egg de entrada está contenido en un archivo, y la segunda lee de un
+archivo la especificación de un AST de nodos JSON, y a raíz de el evalua su resultado.</p> <h3 id="egg-repl"><a href="#egg-repl" class="header-anchor">#</a> Egg-repl</h3> <p>Este archivo contiene una función eggRepl() que inicia un Read-Evaluate-Print-Loop de código Egg.
+Para ello hace uso principalmente del intérprete que creamos anteriormente y del módulo readline,
+que provee de una interfaz para leer datos desde un stream como la consola, de linea en linea.</p> <p>La función tiene que hacer un seguimiento del programa, manteniendo el recuento de paréntesis
+abiertos y cerrados.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> program <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> stack <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div><p>Cabe destacar que se utiliza una estructura de try...catch para capturar errores que pueda generar
+la entrada del usuario e imprimirlos de manera amigable y colorida en la consola.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">try</span> <span class="token punctuation">{</span> <span class="token comment">/* (...) */</span><span class="token punctuation">}</span> 
+<span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">red</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">help</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>A continuación, se debe inicializa la interfaz del módulo readline y se especifica un comportamiento inicial. Esto
+es la impresión por consola de una especie de cabecera en la que se muestra la versión del módulo y un símbolo que
+indica al usuario donde está ingresando texto.</p> <p>A continuación, se especifica su comportamiento frente a una serie de eventos, se omite del siguiente codigo con fines de claridad.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> rl <span class="token operator">=</span> readline<span class="token punctuation">.</span><span class="token function">createInterface</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">input</span><span class="token operator">:</span> process<span class="token punctuation">.</span>stdin<span class="token punctuation">,</span> <span class="token literal-property property">output</span><span class="token operator">:</span> process<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span> completer<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+rl<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token constant">PROMPT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Version '</span> <span class="token operator">+</span> topEnv<span class="token punctuation">[</span><span class="token string">'version'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+rl<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// rl.on(event) {...}</span>
+
+process<span class="token punctuation">.</span>stdin<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;end&quot;</span><span class="token punctuation">,</span> eggExit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>El evento principal al que se debe reaccionar es ante una entrada de input del usuario. Para ello se define
+un trigger para el evento line. Este consiste en actualizar los valores de program y stack, para luego generar
+un nuevo AST que se evalúa y escribe su resultado. Cualquier error será formateado además para mostrarlo de manera
+amigable y colorida.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// End of user input line event</span>
+rl<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'line'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">line</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  stack <span class="token operator">+=</span> <span class="token function">parBalance</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  line <span class="token operator">=</span> line <span class="token operator">+</span> <span class="token string">'\n'</span><span class="token punctuation">;</span>
+  program <span class="token operator">+=</span> line<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>stack <span class="token operator">&lt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token constant">ALLWHITE</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>program<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> r <span class="token operator">=</span> <span class="token function">json2AST</span><span class="token punctuation">(</span><span class="token function">parse</span><span class="token punctuation">(</span>program<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>topEnv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">ins</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">red</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    program <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    stack <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  rl<span class="token punctuation">.</span><span class="token function">setPrompt</span><span class="token punctuation">(</span><span class="token constant">PROMPT</span> <span class="token operator">+</span> <span class="token string">'..'</span><span class="token punctuation">.</span><span class="token function">repeat</span><span class="token punctuation">(</span>stack<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  rl<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Aparte, también se establecen triggers para los eventos de CTRL+D y CTRL+C. El primero termina el bucle lanzando
+un mensaje de despedida, y el segundo descarta la expresión actual.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// Close REPL event (CTRL + D)</span>
+rl<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'close'</span><span class="token punctuation">,</span> eggExit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Discard REPL event (CTRL + C)</span>
+rl<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'SIGINT'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">red</span><span class="token punctuation">(</span><span class="token string">'Expression discarded!'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  program <span class="token operator">=</span> <span class="token string">';'</span><span class="token punctuation">;</span>
+  stack <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  rl<span class="token punctuation">.</span><span class="token function">setPrompt</span><span class="token punctuation">(</span><span class="token constant">PROMPT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  rl<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="executables"><a href="#executables" class="header-anchor">#</a> Executables</h2> <p>This module includes two main executables to interpret Egg logic.</p> <ul><li>egg (bin/egg.js): Accepts a filepath as parameter, expecting some egg code inside the file. Then it returns the result of the code. If no parameter is provided, an Egg REPL will initiate.</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token punctuation">{</span> runFromFile <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/egg-interpreter.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> eggRepl <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/egg-repl.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> fileName <span class="token operator">=</span> process<span class="token punctuation">.</span>argv<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>fileName <span class="token operator">&amp;&amp;</span> fileName<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runFromFile</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token function">eggRepl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>evm (bin/evm.js): One argument is expected, a filepath to a file containing the JSON representation of an AST of Egg code. Then it returns the result of the code associated to that JSON AST.</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token punctuation">{</span> runFromEVM <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../src/egg-interpreter.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> fileName <span class="token operator">=</span> process<span class="token punctuation">.</span>argv<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>fileName <span class="token operator">&amp;&amp;</span> fileName<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runFromEVM</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="tests"><a href="#tests" class="header-anchor">#</a> Tests</h2> <p>Se siguió unos archivos y una estructura determinada para los tests definida por el profesor. Todo se encuentra en la carpeta test,
+dentro de la cual está la carpeta examples que contiene una serie de parejas de archivos .egg y .egg.expected, que contienen códigos
+egg y sus resultados respectivamente.</p> <div class="language- extra-class"><pre class="language-text"><code># array.egg
+do (
+  def(x, arr(arr(1, 4), 5, 7)),
+  print([](x, 0)),
+  print([](x, 1))
+)
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># array.egg.expected
+[1,4]
+5
+</code></pre></div><p>Entonces la ejecución de los test se basa en comprobar que al utilizar el interpretador para un archivo .egg de examples, se genere
+el mismo resultado que se encuentra en el archivo .egg.expected asociado.</p> <p>Se incluyeron 5 archivos .spec.js para comprobar arrays, asignaciones, ifs, scopes y strings. Y el resultado de ejecutar el comando
+npm test es el siguiente.</p> <div class="language-bash extra-class"><pre class="language-bash"><code>usuario@ubuntu ~/Egg-Interpreter <span class="token punctuation">(</span>master<span class="token punctuation">)</span> $ <span class="token function">npm</span> <span class="token builtin class-name">test</span>
+
+<span class="token operator">&gt;</span> @ull-esit-pl-2122/egg-interpreter-sebastian-tamayo-guzman-alu0101131108@1.0.1 <span class="token builtin class-name">test</span>
+<span class="token operator">&gt;</span> nyc --reporter<span class="token operator">=</span>lcov --reporter<span class="token operator">=</span>text-summary --report-dir<span class="token operator">=</span>docs/coverage -o docs mocha
+
+
+
+  Testing arrays
+    ✔ testing array.egg <span class="token punctuation">(</span>924ms<span class="token punctuation">)</span>
+    ✔ testing array-negative-index.egg <span class="token punctuation">(</span>959ms<span class="token punctuation">)</span>
+
+  Testing set: Assigments
+    ✔ testing one.egg <span class="token punctuation">(</span>903ms<span class="token punctuation">)</span>
+    ✔ testing set-error.egg <span class="token punctuation">(</span>875ms<span class="token punctuation">)</span>
+
+  Testing <span class="token keyword">if</span> sentence
+    ✔ testing if.egg <span class="token punctuation">(</span>878ms<span class="token punctuation">)</span>
+
+  Testing scopes
+    ✔ should  not allow the use of non declared variables
+    ✔ testing scope.egg <span class="token punctuation">(</span>882ms<span class="token punctuation">)</span>
+
+  Testing strings
+    ✔ testing string.egg <span class="token punctuation">(</span>1003ms<span class="token punctuation">)</span>
+
+
+  <span class="token number">8</span> passing <span class="token punctuation">(</span>6s<span class="token punctuation">)</span>
+
+
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span> Coverage summary <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+Statements   <span class="token builtin class-name">:</span> <span class="token number">67.35</span>% <span class="token punctuation">(</span> <span class="token number">163</span>/242 <span class="token punctuation">)</span>
+Branches     <span class="token builtin class-name">:</span> <span class="token number">60.93</span>% <span class="token punctuation">(</span> <span class="token number">39</span>/64 <span class="token punctuation">)</span>
+Functions    <span class="token builtin class-name">:</span> <span class="token number">60</span>% <span class="token punctuation">(</span> <span class="token number">27</span>/45 <span class="token punctuation">)</span>
+Lines        <span class="token builtin class-name">:</span> <span class="token number">69.46</span>% <span class="token punctuation">(</span> <span class="token number">157</span>/226 <span class="token punctuation">)</span>
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+</code></pre></div></div> <div class="footer">
     Made with ❤️
   </div></main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.9c667f20.js" defer></script><script src="/assets/js/2.2c19e274.js" defer></script><script src="/assets/js/8.1d776418.js" defer></script>
+    <script src="/assets/js/app.64c68616.js" defer></script><script src="/assets/js/2.2c19e274.js" defer></script><script src="/assets/js/7.174b8db1.js" defer></script>
   </body>
 </html>
