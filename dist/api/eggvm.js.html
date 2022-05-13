@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: eggvm.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: eggvm.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>let insp = require("util").inspect;
+let ins = (x) => insp(x, {depth:null});
+let fs = require("fs");
+
+require("./monkey-patch.js");
+
+const {specialForms, topEnv, cache, checkNegativeIndex} = require("./registry.js");
+const {Value, Word, Apply, Property} = require("./ast.js");
+
+require("./egg-require.js");
+
+let parser = require('@ull-esit-pl-2122/egg-oop-parser-sebastian-tamayo-guzman-alu0101131108');
+let parse = parser.parse;
+
+const { j2a, json2AST } = require('./j2a');
+
+
+function evaluate(expr, env) {
+  expr.evaluate(env);
+}
+
+specialForms['if'] = function(args, env) {
+  if (args.length != 3) {
+    throw new SyntaxError('Bad number of args to if');
+  }
+
+  if (args[0].evaluate(env) !== false) {
+    return args[1].evaluate(env);
+  } else {
+    return args[2].evaluate(env);
+  }
+};
+
+specialForms['while'] = function(args, env) {
+  if (args.length != 2) {
+    throw new SyntaxError('Bad number of args to while');
+  }
+
+  while (evaluate(args[0], env) !== false) {
+    evaluate(args[1], env);
+  }
+  // Egg has no undefined so we return false when there's no meaningful result.
+  return false;
+};
+
+specialForms['do'] = function(args, env) {
+  let value;
+
+  args.forEach((arg) => {
+    value = arg.evaluate(env);
+  });
+
+  return value;
+};
+
+specialForms[':='] = specialForms['def'] = specialForms['define'] = function(args, env) {
+  if (args.length != 2 || args[0].type != 'word') {
+    throw new SyntaxError('Bad use of define');
+  }
+
+  let value = args[1].evaluate(env);
+  env[args[0].name] = value;
+  return value;
+};
+
+specialForms['->'] =specialForms['fun'] = function(args, env) {
+  if (!args.length) {
+    throw new SyntaxError('Functions need a body.')
+  }
+
+  function name(expr) {
+    if (expr.type != 'word') {
+      throw new SyntaxError('Arg names must be words');
+    }
+
+    return expr.name;
+  }
+
+  let paramNames = args.slice(0, args.length - 1).map(name);
+  let body = args[args.length - 1];
+
+  let jsFun = function(...args) {
+    if (args.length > paramNames.length) {
+      throw new TypeError(`Wrong number of arguments. Called with ${args.length} arguments and declared ${paramNames.length} parameters`);
+    }
+
+    let localEnv = Object.create(env);
+    for (let i = 0; i &lt; args.length; i++) {
+      localEnv[paramNames[i]] = args[i];
+    }
+
+    return body.evaluate(localEnv);
+  };
+  jsFun.numParams = paramNames.length; // set other JS attributes as toString, etc.
+  jsFun.ast = new Apply({ 
+    type: 'apply', 
+    operator: { 
+      type: 'word', 
+      name: 'fun' 
+    }, 
+    args: args 
+  });
+  return jsFun;
+};
+
+specialForms['='] = specialForms['set'] = function(args, env) {
+  if (args.length !== 2) {
+    throw new SyntaxError(`Bad use of set '${JSON.stringify(args, null, 0).substring(0,20)}'`);
+  }
+
+  let valueTree = args[args.length - 1];
+  let value = valueTree.evaluate(env);
+
+  let leftSide = args[0];
+  let [s, ...index] = leftSide.leftEvaluate(env);
+
+  let last = index.length - 1
+  for (let j = 0; j &lt; last; j++) {
+    index[j] = checkNegativeIndex(s, index[j]);
+    s = s[index[j]];
+  }
+  index[last] = checkNegativeIndex(s, index[last]);
+  s[index[last]] = value;
+
+  return value;
+}
+
+/**
+ * To create objects in egg code.
+ * @param {*} args arguments
+ * @param {*} env environment
+ * @returns result
+ */
+specialForms["object"] = (args, env) => {
+  if (args.length &lt; 2) {
+    throw new Error("Invalid number of arguments for object");
+  }
+
+  const objEnv = Object.create(env);
+  const obj = {};
+  objEnv["self"] = obj;
+
+  let name;
+  let value;
+  for (let i = 0; i &lt; args.length; i += 2) {
+    name = args[i].getIndex() || args[i].evaluate(objEnv);
+    value = args[i + 1].evaluate(objEnv);
+    obj[name] = objEnv[name] = value;
+  }
+
+  return obj;
+};
+
+/**
+ * To evaluate ASTs in egg code.
+ * @param {*} args arguments
+ * @param {*} env environment
+ * @returns result
+ */
+specialForms['eval'] = function (args, env) {
+  if (args.length != 1) {
+    throw "More than one expression isnt allowed"
+  }
+  let state = args[0].evaluate(env)
+  return state.ast.evaluate(state.scope)
+};
+
+topEnv["debug"] = false;
+topEnv['null'] = null;
+topEnv['true'] = true;
+topEnv['false'] = false;
+topEnv['undefined'] = undefined;
+topEnv['RegExp'] = require('xregexp');
+topEnv['fetch'] = require('node-fetch');
+topEnv['fs'] = require('fs');
+topEnv['Math'] = Math;
+topEnv['Object'] = Object;
+topEnv['path'] = require('path');
+topEnv["process"] = process;
+topEnv['parse'] = parse;
+
+// For the scope analysis
+topEnv.parent = function() { return Object.getPrototypeOf(this)};
+topEnv.hasBinding = Object.hasOwnProperty;
+// Warning!! with the current implementation Egg objects don't inherit from Object 
+// and don't benefit monkey patching. See registry.js
+topEnv["hasOwnProperty"] = Object.prototype.hasOwnProperty;
+
+// monkey patching sub. 2022 deprecated
+topEnv["sub"] = Object.prototype.sub; 
+
+// arithmetics
+[
+  '+', 
+  '-', 
+  '*', 
+  '/', 
+  '**',
+].forEach(op => {
+  topEnv[op] = new Function('a, b', `return a ${op} b;`);
+});
+
+// comparison and logical
+[
+  '==', 
+  '&lt;', 
+  '>',
+  '&amp;&amp;',
+  '||'
+].forEach(op => {
+  topEnv[op] = new Function('a, b', `return a ${op} b;`);
+});
+
+topEnv['print'] = function(...value) {
+  let processed = value.map(v => {
+    if (typeof v === "string") return v;
+    else if (typeof v == "function") {
+      let firstLines = v.toString().match(/.*/);
+      return firstLines[0];
+    }
+    else if (topEnv["debug"]) return ins(v); // 
+    else return JSON.stringify(v, null, 0); 
+    
+  })
+  console.log(...processed);
+  return value.length === 1? value[0] : value;
+};
+
+topEnv["arr"] = topEnv["array"] = function(...args) {
+  return args;
+};
+
+topEnv["length"] = function(array) {
+  return array.length;
+};
+
+/**
+ * To ad map / hash creation in Egg code.
+ * @param  {...any} args arguments
+ * @returns resulting hash
+ */
+topEnv["map"] = function(...args) {
+  if (args.length % 2) throw new SyntaxError('Error!: Number of parameters must be even');
+  let r = Object.create(null);
+  for(let i = 0; i &lt; args.length; i += 2) {
+    r[args[i]] = args[i + 1];
+  }
+  return r;
+};
+
+topEnv["&lt;-"] = topEnv["element"] = function(array, ...index) {
+  try {
+    let target = array;
+    for (let i of index) {
+      let v = (1 &lt; 0)? target.length + i : i;
+      target = target[v];
+    }
+    if ((target == undefined) || (target == null)) {
+      throw Error(`Error indexing "${ins(array)}" with index "${ins(index)}". Access (...)`)
+    }
+    return target;
+  }
+  catch (e) {
+    throw new ReferenceError('Error indexing ' + ins(array) + ' with indices ' + ins(index));
+    // or console.log it
+  }
+};
+
+/**
+ * This funcions interprets Egg code passed as parameter.
+ * @param {*} program program to run
+ * @returns result of execution
+ */
+function run(program) {
+  try {
+    const ast = parser.parse(program);
+    let tree = json2AST(ast);
+    let env = Object.create(topEnv);
+    let result = tree.evaluate(env);
+
+    return result;
+  }
+  catch (err) {
+    // console.log(err);
+    throw err;
+  }
+}
+
+/**
+ * This funcions interprets Egg code inside the file passed as parameter.
+ * @param {*} filename file with the program to run
+ * @returns result of execution
+ */
+function runFromFile(fileName) {
+  try {
+    const ast = parser.parseFromFile(fileName);
+    let tree = json2AST(ast);
+    let env = Object.create(topEnv);
+    let result = tree.evaluate(env);
+
+    return result;
+  }
+  catch (err) {
+    console.log(err);
+    // throw err;
+  }
+}
+
+/**
+ * This funcions interprets Egg JSON asts in the file passed as parameter.
+ * @param {*} fileName file with the json ast to run.
+ * @returns result of execution
+ */
+function runFromEVM(fileName) {
+  try {
+    let json = fs.readFileSync(fileName, 'utf8');
+    let treeFlat = JSON.parse(json);
+    let tree = json2AST(treeFlat);
+    let env = Object.create(topEnv);
+    return tree.evaluate(env);
+  }
+  catch (err) {
+    console.log(err);
+  }
+}
+
+module.exports = {json2AST, run, runFromFile,runFromEVM, topEnv, specialForms, parser, evaluate};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Apply.html">Apply</a></li><li><a href="Property.html">Property</a></li><li><a href="Value.html">Value</a></li><li><a href="Word.html">Word</a></li></ul><h3>Global</h3><ul><li><a href="global.html#checkNegativeIndex">checkNegativeIndex</a></li><li><a href="global.html#eggRepl">eggRepl</a></li><li><a href="global.html#json2AST">json2AST</a></li><li><a href="global.html#REQUIRE">REQUIRE</a></li><li><a href="global.html#run">run</a></li><li><a href="global.html#runFromEVM">runFromEVM</a></li><li><a href="global.html#runFromFile">runFromFile</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri May 13 2022 00:08:17 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
